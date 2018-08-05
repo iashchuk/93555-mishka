@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
 <!-- Поменять обратно на два пробела в editorconfig -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mishka</title>
+    <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 
-<body>
-
-    <h1>Hello World!</h1>
+<body class="page">
+    <header class="page__header">
+        <nav class="navigation">
+            <div class="navigation__logo logo">
+                <a class="logo__link">
+                    <picture>
+                        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                        <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+                    </picture>
+                </a>
+            </div>
+            <button class="navigation__toggle" type="button">
+                <span class="visually-hidden">Меню</span>
+            </button>
+            <ul class="navigation__menu main-menu">
+                <li class="menu__item menu__item_catalog">
+                    <a class="menu__link" href="catalog.html">Каталог товаров</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="form.html">Вязание на заказ</a>
+                </li>
+            </ul>
+            <ul class="navigation__user user-menu">
+                <li class="user-menu__item">
+                    <a class="user-menu__link" href="#">
+                        <span class="user-menu__text">Поиск по сайту</span>
+                    </a>
+                </li>
+                <li class="user-menu__item">
+                    <a class="user-menu__link" href="#">Корзина: пока пуста</a>
+                </li>
+            </ul>
+            <ul class="navigation__special special-menu">
+                <li class="special-menu__item">
+                    <a class="special-menu__link" href="#">Новые поступления</a>
+                </li>
+                <li class="special-menu__item">
+                    <a class="special-menu__link" href="#">Распродажа</a>
+                </li>
+            </ul>
+            <p class="navigation__text">Бесплатная доставка по России</p>
+        </nav>
+    </header>
+    <main>
+        <h1 class="visually-hidden">Мишка - магазин товаров ручной работы</h1>
 
 </body>
 
