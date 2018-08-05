@@ -1,0 +1,190 @@
+'use strict';
+
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var plumber = require('gulp-plumber');
+var postcss = require('gulp-postcss');
+var posthtml = require('gulp-posthtml');
+var include = require('posthtml-include');
+var autoprefixer = require('autoprefixer');
+var server = require('browser-sync').create();
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var run = require('run-sequence');
+var del = require('del');
+var minify = require('gulp-csso');
+var imagemin = require('gulp-imagemin');
+var jpegoptim = require('imagemin-jpegoptim');
+var webp = require('imagemin-webp');
+var svgstore = require('gulp-svgstore');
+
+var paths = {
+  source: {
+    root: "source",
+    html: "source/**/*.html",
+    sass: "source/sass/style.scss",
+    sassWatch: "source/sass/**/*.{scss,sass}",
+    js: "source/js/**/*.js",
+    fonts: "source/fonts/**/*.{woff,woff2}",
+    imgWebp: "source/img/**",
+    imgOptim: "source/img/**/*.{jpg,png,svg}",
+    spritePattern: "source/img/icon-*.svg",
+    picturefill: "node_modules/picturefill/dist/picturefill.js",
+    svg4everybody: "node_modules/svg4everybody/dist/svg4everybody.js"
+  },
+  build: {
+    root: "build",
+    css: "build/css",
+    js: "build/js",
+    img: "build/img",
+    fonts: "build/fonts"
+  }
+};
+
+
+ /*Удаление*/
+ gulp.task('clean:build', function () {
+   console.log('Очистка папки build...');
+   return del(paths.build.root);
+ });
+
+
+ /*Копирование шрифтов и изображений*/
+ gulp.task('copy:fonts', function () {
+   console.log('Копирование шрифтов в папку build...');
+     return gulp.src(paths.source.fonts)
+     .pipe(gulp.dest(paths.build.fonts));
+ });
+
+
+
+ /*Копирование HTML-страниц*/
+ gulp.task('copy:html', function () {
+   console.log('Копирование HTML-страниц...');
+   return gulp.src(paths.source.html)
+         .pipe(posthtml([
+             include()
+         ]))
+         .pipe(gulp.dest(paths.build.root));
+ });
+
+
+ /*Оптимизация изображений*/
+ gulp.task('process:images', function () {
+   console.log('Оптимизация изображений...');
+
+   return gulp.src(paths.source.imgOptim)
+   .pipe(imagemin([
+
+     imagemin.optipng({optimizationLevel: 3}),
+
+     jpegoptim({
+       max: 80,
+       progressive: true
+     }),
+
+     imagemin.svgo({
+       plugins: [
+         {removeViewBox: false},
+         {removeTitle: true},
+         {cleanupNumericValues:
+           {floatPrecision: 0}
+         }
+       ]
+     })
+   ]))
+
+   .pipe(gulp.dest(paths.build.img));
+ });
+
+
+ /*Создаем версии изображений в формате Webp*/
+ gulp.task('create:webp', function () {
+   console.log('Конвертирование изображений в формат WebP...');
+  return gulp
+    .src(paths.source.imgWebp)
+    .pipe(imagemin([webp({ quality: 90 })]))
+    .pipe(rename({ extname: '.webp' }))
+    .pipe(gulp.dest(paths.build.img));
+});
+
+
+ /*Создаем SVG-спрайт*/
+ gulp.task('create:svg-sprite', function () {
+   console.log('Создание SVG спрайта...');
+
+   return gulp.src(paths.source.spritePattern)
+     .pipe(svgstore({
+       inlineSvg: true
+   }))
+     .pipe(rename('sprite.svg'))
+     .pipe(gulp.dest(paths.build.img));
+ });
+
+
+ /*Сборка и минификация стилей SASS*/
+ gulp.task('style:sass', function() {
+   console.log('Сборка и минификация стилей...');
+
+   gulp.src(paths.source.sass)
+   .pipe(plumber())
+   .pipe(sass())
+   .pipe(postcss([
+     autoprefixer()
+   ]))
+   .pipe(gulp.dest(paths.build.css))
+   .pipe(minify({restructure: false}))
+   .pipe(rename({suffix: '.min'}))
+   .pipe(gulp.dest(paths.build.css))
+   .pipe(server.stream());
+ });
+
+
+ /*Сборка и минификация JS*/
+ gulp.task('script:js', function () {
+   console.log('Сборка и минификация скриптов...')
+
+   return gulp.src([
+     paths.source.js,
+     paths.source.picturefill,
+     paths.source.svg4everybody
+   ])
+   .pipe(concat('script.js'))
+   .pipe(gulp.dest(paths.build.js))
+   .pipe(uglify())
+   .pipe(rename({suffix: '.min'}))
+   .pipe(gulp.dest(paths.build.js))
+   .pipe(server.stream());
+ });
+
+
+ /*Сервер проекта*/
+ gulp.task('serve', function() {
+   server.init({
+     server: paths.build.root,
+     notify: false,
+     open: true,
+     cors: true,
+     ui: false
+   });
+
+   gulp.watch(paths.source.sassWatch, ['style:sass']);
+   gulp.watch(paths.source.js, ['script:js']);
+   gulp.watch(paths.source.html, ['copy:html', server.reload]);
+ });
+
+
+ /*Сборка проекта*/
+ gulp.task('build', function (done) {
+   run(
+   'clean:build',
+   'copy:fonts',
+   'copy:html',
+   'style:sass',
+   'script:js',
+   'create:webp',
+   'process:images',
+   'create:svg-sprite',
+   done);
+ });
