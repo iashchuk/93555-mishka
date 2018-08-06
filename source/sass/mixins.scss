@@ -1,0 +1,23 @@
+@mixin text ($font-size, $line-height, $font-weight) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin tablet {
+  @media (min-width: #{$width-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$width-desktop}) {
+    @content;
+  }
+}
+
+@mixin retina-resolution {
+  @media (min-resolution: #{$retina-dpi}), (min-resolution: #{$retina-dppx}) {
+    @content;
+  }
+}
