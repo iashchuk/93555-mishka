@@ -3,112 +3,115 @@
 <!-- Поменять обратно на два пробела в editorconfig -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 
 </head>
 
 <body class="page container">
-    <header class="page__header">
-        <nav class="navigation">
-            <div class="navigation__logo logo">
-                <a class="logo__link">
-                    <picture>
-                        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-                        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                        <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-                    </picture>
-                </a>
-            </div>
-            <button class="navigation__toggle" type="button">
-                <span class="visually-hidden">Меню</span>
-            </button>
-            <ul class="navigation__menu main-menu">
-                <li class="menu__item menu__item_catalog">
-                    <a class="menu__link" href="catalog.html">Каталог товаров</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="form.html">Вязание на заказ</a>
-                </li>
-            </ul>
-            <ul class="navigation__user user-menu">
-                <li class="user-menu__item">
-                    <a class="user-menu__link" href="#">
-                        <span class="user-menu__text">Поиск по сайту</span>
-                    </a>
-                </li>
-                <li class="user-menu__item">
-                    <a class="user-menu__link" href="#">Корзина: пока пуста</a>
-                </li>
-            </ul>
-            <ul class="navigation__special special-menu">
-                <li class="special-menu__item">
-                    <a class="special-menu__link" href="#">Новые поступления</a>
-                </li>
-                <li class="special-menu__item">
-                    <a class="special-menu__link" href="#">Распродажа</a>
-                </li>
-            </ul>
-            <p class="navigation__text">Бесплатная доставка по России</p>
-        </nav>
-    </header>
-    <main class="page__main">
-        <h1 class="visually-hidden">Мишка - магазин товаров ручной работы</h1>
+  <header class="page__header">
+    <nav class="navigation">
+      <div class="navigation__logo logo">
+        <a class="logo__link">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          </picture>
+        </a>
+      </div>
+      <button class="navigation__toggle navigation__toggle--off" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+      <div class="navigation__menu menu">
+        <ul class="menu__list menu__list--site">
+          <li class="menu__item menu__item--catalog">
+            <a class="menu__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="menu__item menu__item--order">
+            <a class="menu__link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="menu__list menu__list--user">
+          <li class="menu__item menu__item--search">
+            <a class="menu__link" href="#">
+              <span class="menu__span">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="menu__item menu__item--cart">
+            <a class="menu__link" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="menu__list menu__list--special">
+          <li class="menu__item menu__item--new">
+            <a class="menu__link" href="#">Новые поступления</a>
+          </li>
+          <li class="menu__item menu__item--sale">
+            <a class="menu__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="menu__text">Бесплатная доставка по России</p>
+      </div>
+    </nav>
+  </header>
+  <main class="page__main">
+    <h1 class="visually-hidden">Мишка - магазин товаров ручной работы</h1>
 
-        <section class="page__promo promo">
-            <h2 class="visually-hidden">Наши основные разделы</h2>
-            <p class="promo__tagline">Милые штуки ручной работы для дома</p>
-            <ul class="promo__list">
-                <li class="promo__item promo-unit">
-                    <a class="promo-unit__link promo-unit__link--interior" href="#">
-                        <p class="promo-unit__text">Предметы интерьера</p>
-                    </a>
-                </li>
-                <li class="promo__item promo-unit">
-                    <a class="promo-unit__link promo-unit__link--toys" href="#">
-                        <p class="promo-item__text">Детские игрушки</p>
-                    </a>
-                </li>
-            </ul>
-        </section>
+    <section class="page__promo promo">
+      <h2 class="visually-hidden">Наши основные разделы</h2>
+      <p class="promo__tagline">Милые штуки ручной работы для дома</p>
+      <ul class="promo__list">
+        <li class="promo__item promo-unit">
+          <a class="promo-unit__link promo-unit__link--interior" href="#">
+            <p class="promo-unit__text">Предметы интерьера</p>
+          </a>
+        </li>
+        <li class="promo__item promo-unit">
+          <a class="promo-unit__link promo-unit__link--toys" href="#">
+            <p class="promo-item__text">Детские игрушки</p>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-        <section class="hit">
-            <h2 class="hit__title">Вязаные корзинки</h2>
-            <span class="hit__mark">Товар недели</span>
-            <div class="hit__wrapper">
-                <p class="hit__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-                <table class="hit__spec spec-table">
-                    <tr class="spec-table__row">
-                        <td class="spec-table__cell spec-table__cell_name">Цвет:</td>
-                        <td class="spec-table__cell spec-table__cell_value">&#171;Тиффани&#187;&#8260;серый</td>
-                    </tr>
-                    <tr class="spec-table__row">
-                        <td class="spec-table__cell spec-table__cell_name">Диаметр:</td>
-                        <td class="spec-table__cell spec-table__cell_value">25 см</td>
-                    </tr>
-                    <tr class="spec-table__row">
-                        <td class="spec-table__cell spec-table__cell_name">Высота:</td>
-                        <td class="spec-table__cell spec-table__cell_value">15 см</td>
-                    </tr>
-                </table>
-                <picture>
-                    <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
-                    <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-                    <img class="hit__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
-                        alt="Вязаные корзинки">
-                </picture>
-                <p class="hit__price">Цена: 990 руб.</p>
-                <a class="hit__button button" href="#">заказать</a>
-            </div>
-        </section>
+    <section class="hit">
+      <h2 class="hit__title">Вязаные корзинки</h2>
+      <span class="hit__mark">Товар недели</span>
+      <div class="hit__wrapper">
+        <p class="hit__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="hit__spec spec-table">
+          <tr class="spec-table__row">
+            <td class="spec-table__cell spec-table__cell_name">Цвет:</td>
+            <td class="spec-table__cell spec-table__cell_value">&#171;Тиффани&#187;&#8260;серый</td>
+          </tr>
+          <tr class="spec-table__row">
+            <td class="spec-table__cell spec-table__cell_name">Диаметр:</td>
+            <td class="spec-table__cell spec-table__cell_value">25 см</td>
+          </tr>
+          <tr class="spec-table__row">
+            <td class="spec-table__cell spec-table__cell_name">Высота:</td>
+            <td class="spec-table__cell spec-table__cell_value">15 см</td>
+          </tr>
+        </table>
+        <picture>
+          <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+          <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+          <img class="hit__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+        </picture>
+        <p class="hit__price">Цена: 990 руб.</p>
+        <a class="hit__button button" href="#">заказать</a>
+      </div>
+    </section>
 
-    </main>
+  </main>
+
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
