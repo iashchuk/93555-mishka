@@ -14,6 +14,14 @@
       background-size: auto 23px;
     }
   }
+
+   @include desktop {
+     &::after {
+      left: -12px;
+      height: 22px;
+      background-size: auto 37px;
+     }
+   }
 }
 
 .promo__tagline {
@@ -51,6 +59,17 @@
       background-image: url("../img/hero-tablet@2x.jpg");
     }
   }
+
+  @include desktop {
+    min-height: 559px;
+    font-size: 53px;
+    line-height: 57px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
+  }
 }
 
 .promo__list {
@@ -65,5 +84,9 @@
   @include tablet {
     position: relative;
     width: 668px;
+  }
+
+  @include desktop {
+    width: 1050px;
   }
 }

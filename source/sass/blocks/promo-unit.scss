@@ -6,6 +6,10 @@
   @include tablet {
     width: 334px;
   }
+
+  @include desktop {
+    width: 525px;
+  }
 }
 
 .promo-unit__link {
