@@ -2,6 +2,10 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  @include tablet {
+    width: 334px;
+  }
 }
 
 .promo-unit__link {
@@ -23,6 +27,11 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
+
+  @include tablet {
+    padding: 27px 36px 36px;
+  }
+
 }
 
 .promo-unit__link--interior {
@@ -37,4 +46,10 @@
   width: 120px;
   margin: 0;
   padding: 0;
+
+  @include tablet {
+    width: 111px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
