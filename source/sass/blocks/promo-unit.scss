@@ -1,0 +1,40 @@
+.promo-unit {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.promo-unit__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 24px 95px 30px 28px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    top: -5px;
+    padding-top: 19px;
+    padding-bottom: 40px;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.promo-unit__link--interior {
+  background-color: #63d1bb;
+}
+
+.promo-unit__link--toys {
+  background-color: #56c3b2;
+}
+
+.promo-unit__text {
+  width: 120px;
+  margin: 0;
+  padding: 0;
+}
