@@ -12,6 +12,13 @@
 </head>
 
 <body class="page container">
+
+<!-- SVG-спрайт -->
+<div style="display: none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+<!-- END -->
+
   <header class="page__header">
     <nav class="navigation">
       <div class="navigation__logo logo">
@@ -68,11 +75,17 @@
         <li class="promo__item promo-unit">
           <a class="promo-unit__link promo-unit__link--interior" href="#">
             <p class="promo-unit__text">Предметы интерьера</p>
+            <svg class="promo-unit__svg promo-unit__svg--interior" width="40" height="62">
+                  <use xlink:href="#icon-interior"></use>
+                </svg>
           </a>
         </li>
         <li class="promo__item promo-unit">
           <a class="promo-unit__link promo-unit__link--toys" href="#">
             <p class="promo-unit__text">Детские игрушки</p>
+            <svg class="promo-unit__svg promo-unit__svg--toy" width="60" height="60">
+                  <use xlink:href="#icon-toy"></use>
+                </svg>
           </a>
         </li>
       </ul>

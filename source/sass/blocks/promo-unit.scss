@@ -12,6 +12,28 @@
   }
 }
 
+.promo-unit__svg {
+  position: absolute;
+  top: 50%;
+  fill: rgba(20, 144, 128, 0.5);
+  transform: translateY(-50%);
+}
+.promo-unit__svg--interior {
+  right: 37px;
+}
+
+.promo-unit__svg--toy {
+  right: 27px;
+
+   @include tablet {
+     right: 34px;
+   }
+
+   @include desktop {
+     right: 36px;
+   }
+}
+
 .promo-unit__link {
   position: relative;
   display: block;
@@ -26,16 +48,24 @@
     top: -5px;
     padding-top: 19px;
     padding-bottom: 40px;
+
+    .promo-unit__svg {
+      fill: rgba(20, 144, 128, 0.7);
+      top: calc(50% - 5px);
+    }
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+
+    .promo-unit__svg {
+      fill: rgba(20, 144, 128, 0.3);
+    }
   }
 
   @include tablet {
     padding: 27px 36px 36px;
   }
-
 }
 
 .promo-unit__link--interior {
