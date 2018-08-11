@@ -1,0 +1,24 @@
+.spec-table {
+  border-collapse: collapse;
+}
+
+.spec-table__cell {
+  padding: 9px 10px 10px 0;
+  border-bottom: 1px solid #ececec;
+
+  @include desktop {
+    padding: 8px 10px 12px 0;
+  }
+}
+
+.spec-table__cell--name {
+  width: 97px;
+}
+
+.spec-table__cell--value {
+  width: 160px;
+
+  @include tablet {
+    width: 198px;
+  }
+}
