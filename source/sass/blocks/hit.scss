@@ -27,6 +27,20 @@
       background-image: url("../img/zigzag-line-tablet.png");
     }
   }
+
+  @include desktop {
+    justify-content: flex-end;
+    width: 700px;
+    padding-top: 18px;
+    padding-bottom: 90px;
+
+    &::after {
+      left: 0;
+      width: 1050px;
+      height: 23px;
+      background-image: url("../img/zigzag-line-desktop.png");
+    }
+  }
 }
 
 .hit__title {
@@ -42,6 +56,15 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @include desktop {
+    order: 1;
+    width: 527px;
+    margin-right: 3px;
+    margin-left: 46px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .hit__wrapper {
@@ -50,6 +73,12 @@
     display: flex;
     flex-wrap: wrap;
     width: 334px;
+  }
+
+  @include desktop {
+    order: 2;
+    width: 350px;
+    margin-right: 175px;
   }
 }
 
@@ -71,6 +100,11 @@
     line-height: 17px;
     text-align: center;
   }
+
+  @include desktop {
+    width: 85px;
+    padding-top: 15px;
+  }
 }
 
 .hit__description {
@@ -87,6 +121,10 @@
     line-height: 30px;
     margin-bottom: 36px;
   }
+
+  @include desktop {
+    margin-bottom: 48px;
+  }
 }
 
 .hit__spec {
@@ -98,6 +136,10 @@
 
   @include tablet {
     margin-bottom: 56px;
+  }
+
+  @include desktop {
+    margin-bottom: 106px;
   }
 }
 
@@ -114,6 +156,13 @@
     right: -332px;
     width: 333px;
   }
+
+  @include desktop {
+    top: -158px;
+    right: -524px;
+    z-index: -1;
+    width: 525px;
+  }
 }
 
 .hit__price {
@@ -127,6 +176,10 @@
   @include tablet {
     margin: 0 0 35px 70px;
     font-size: 20px;
+  }
+
+  @include desktop {
+    margin-left: 73px;
   }
 }
 
