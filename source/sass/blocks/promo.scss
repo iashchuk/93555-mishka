@@ -1,6 +1,7 @@
 .promo {
   @include tablet {
     position: relative;
+    margin-bottom: 25px;
     background-color: #f9f9f9;
 
     &::after {
@@ -16,6 +17,8 @@
   }
 
    @include desktop {
+     margin-bottom: 100px;
+
      &::after {
       left: -12px;
       height: 22px;

@@ -58,9 +58,9 @@ gulp.task("copy:fonts", function() {
 gulp.task("copy:html", function() {
     console.log("Копирование HTML-страниц...");
     return gulp
-        .src(paths.source.html)
-        .pipe(posthtml([include()]))
-        .pipe(gulp.dest(paths.build.root));
+        .src("source/**/*.html")
+        // .pipe(posthtml([include()]))
+        .pipe(gulp.dest("build"));
 });
 
 /*Оптимизация изображений*/
