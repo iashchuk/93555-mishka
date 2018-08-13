@@ -1,0 +1,100 @@
+.page {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+.page__container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include tablet {
+    min-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1150px;
+    min-width: 1150px;
+    padding: 0 50px;
+  }
+}
+
+.page__container--nopadding {
+  @media (width: 320px) {
+    padding: 0;
+  }
+}
+
+.page__title {
+  margin: 0;
+  padding: 68px 10px 76px;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #f1f1f1;
+
+  @include tablet {
+    margin-bottom: 84px;
+    padding-top: 26px;
+    padding-bottom: 61px;
+    font-size: 43px;
+    line-height: 50px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: relative;
+      display: block;
+      width: 100vw;
+      height: 15px;
+      margin: 0 auto;
+      bottom: -67px;
+      left: -10px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 130px;
+    padding-bottom: 80px;
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      height: 22px;
+      bottom: -85px;
+      background-position-x: -14px;
+    }
+  }
+}
+
+.page__header {
+  @include tablet {
+    position: relative;
+    background-color: #f1f1f1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 88px;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.page__header--main {
+  background-color: #f9f9f9;
+}
+
+.page__promo {
+  @include tablet {
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    margin-bottom: 100px;
+  }
+}
