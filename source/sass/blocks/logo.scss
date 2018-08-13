@@ -1,7 +1,58 @@
 .logo {
   display: block;
   width: 100%;
-  padding: 22px 15px;
+  padding: 22px 5px 22px 116px;
   background-color: #ffffff;
-  text-align: center;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+
+  @include tablet {
+    width: 371px;
+    padding-bottom: 19px;
+    padding-left: 50px;
+    border-top: none;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.1);
+  }
+
+  @include desktop {
+    width: 310px;
+    padding: 10px 5px 6px 57px;
+  }
+}
+
+.logo__link {
+  display: block;
+  width: 86px;
+  height: 35px;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    width: 112px;
+    height: 46px;
+  }
+
+  @include desktop {
+    width: 155px;
+    height: 72px;
+  }
+}
+
+.logo__image {
+  @include tablet {
+    width: 112px;
+    height: 46px;
+  }
+
+  @include desktop {
+    width: 155px;
+    height: 72px;
+  }
 }
