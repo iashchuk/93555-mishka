@@ -1,8 +1,20 @@
 .navigation {
   position: relative;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.navigation__logo {
+  margin: 0;
+
+  @include tablet {
+    margin-left: -50px;
+  }
+
+  @include desktop {
+    order: 2;
+    margin-left: 0;
+  }
 }
 
 .navigation__toggle {
@@ -14,6 +26,17 @@
   background-color: transparent;
   background-image: url("../img/icon-menu-close.svg");
   border: none;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+  }
+}
+
+.navigation__toggle--off {
+  display: none;
 }
 
 .navigation__toggle--on {
@@ -21,6 +44,67 @@
   background-repeat: no-repeat;
 }
 
-.navigation__toggle--off {
+.navigation__site {
+  margin: 0;
+
+  @include tablet {
+    display: block;
+    order: 1;
+  }
+
+  @include desktop {
+    margin-left: -50px;
+  }
+}
+.navigation__site--closed {
   display: none;
+}
+
+.navigation__user {
+  margin: 0;
+  @include tablet {
+    display: block;
+    margin-right: -50px;
+  }
+
+  @include desktop {
+    order: 3;
+    margin-right: -50px;
+  }
+}
+.navigation__user--closed {
+  display: none;
+}
+
+.navigation__special {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    order: 4;
+    margin: 0;
+  }
+}
+
+.navigation__text {
+  display: none;
+
+  @include tablet {
+    position: relative;
+    order: 2;
+    display: block;
+    width: 320px;
+    margin: 0;
+    margin-left: auto;
+    padding: 17px 0 27px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: right;
+    color: #444444;
+  }
+
+  @include desktop {
+    order: 5;
+  }
 }
