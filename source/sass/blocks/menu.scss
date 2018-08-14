@@ -5,6 +5,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  background-color: #ffffff;
 
   @include tablet {
     position: relative;
@@ -20,13 +21,10 @@
 
   @include desktop {
     width: 440px;
-    background-color: #ffffff;
   }
 }
 
 .menu--user {
-  background-color: #ffffff;
-
   @include tablet {
     width: 397px;
   }
@@ -41,6 +39,7 @@
   @include desktop {
     display: flex;
     width: 700px;
+    background-color: transparent;
   }
 }
 
@@ -52,11 +51,13 @@
   @include tablet {
     width: 167px;
     border: none;
+    background-color: #f9f9f9;
   }
 
   @include desktop {
     width: 206px;
     padding-left: 37px;
+    background-color: #ffffff;
     border-right: 1px solid rgba(68, 68, 68, 0.1);
     border-bottom: 1px solid rgba(68, 68, 68, 0.1);
 
@@ -152,5 +153,29 @@
     border: 0;
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
+  }
+}
+
+.menu__icon {
+  position: absolute;
+  opacity: 0.2;
+
+  &--search {
+    top: 32px;
+    left: 32px;
+
+    @include tablet {
+      top: 36px;
+    }
+  }
+
+  &--cart {
+    top: 31px;
+    left: 30px;
+
+    @include tablet {
+      top: 34px;
+      left: 32px;
+    }
   }
 }

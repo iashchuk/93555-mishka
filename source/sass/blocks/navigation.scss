@@ -1,12 +1,11 @@
 .navigation {
   position: relative;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-}
+ }
 
 .navigation__logo {
-  margin: 0;
-
   @include tablet {
     margin-left: -50px;
   }
