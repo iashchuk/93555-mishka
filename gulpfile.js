@@ -109,11 +109,7 @@ gulp.task("create:svg-sprite", function() {
 
     return gulp
         .src(paths.source.spritePattern)
-        .pipe(
-            svgstore({
-                inlineSvg: true
-            })
-        )
+        .pipe(svgstore({inlineSvg: true}))
         .pipe(rename("sprite.svg"))
         .pipe(gulp.dest(paths.build.img));
 });

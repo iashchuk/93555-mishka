@@ -10,13 +10,6 @@
 </head>
 
 <body class="page">
-
-  <!-- SVG-спрайт -->
-  <div style="display: none">
-    <include src="build/img/sprite.svg"></include>
-  </div>
-  <!-- END -->
-
   <header class="page__header page__header--main">
     <nav class="navigation page__container page__container--nopadding">
       <div class="navigation__logo logo">
@@ -24,7 +17,7 @@
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="logo__image" src="img/logo-mobile.svg" alt="Мишка">
+            <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина">
           </picture>
         </a>
       </div>
@@ -42,11 +35,18 @@
       <ul class="navigation__user menu menu--user">
         <li class="menu__item menu__item--user menu__item--search">
           <a class="menu__link menu__link--user" href="#">
+            <svg class="menu__icon menu__icon--search" width="18" height="18">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
             <span class="menu__span">Поиск по сайту</span>
           </a>
         </li>
         <li class="menu__item menu__item--user menu__item--cart">
-          <a class="menu__link menu__link--user" href="#">Корзина: пока пуста</a>
+          <a class="menu__link menu__link--user" href="#">
+            <svg class="menu__icon menu__icon--cart" width="20" height="19">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+            Корзина: пока пуста</a>
         </li>
       </ul>
       <ul class="navigation__special menu menu--special">
@@ -66,22 +66,21 @@
     <section class="page__promo promo">
       <h2 class="visually-hidden">Наши основные разделы</h2>
       <div class="page__container page__container--nopadding">
-        <p class="promo__tagline">Милые штуки ручной
-          <br>работы для дома</p>
+        <p class="promo__tagline">Милые штуки ручной<br>работы для дома</p>
         <ul class="promo__list">
           <li class="promo__item promo-unit">
             <a class="promo-unit__link promo-unit__link--interior" href="#">
               <p class="promo-unit__text">Предметы интерьера</p>
-              <svg class="promo-unit__svg promo-unit__svg--interior" width="40" height="62">
-                <use xlink:href="#icon-interior"></use>
+              <svg class="promo-unit__icon promo-unit__icon--interior" width="40" height="62">
+                <use xlink:href="img/sprite.svg#icon-interior"></use>
               </svg>
             </a>
           </li>
           <li class="promo__item promo-unit">
             <a class="promo-unit__link promo-unit__link--toys" href="#">
               <p class="promo-unit__text">Детские игрушки</p>
-              <svg class="promo-unit__svg promo-unit__svg--toy" width="60" height="60">
-                <use xlink:href="#icon-toy"></use>
+              <svg class="promo-unit__icon promo-unit__icon--toy" width="60" height="60">
+                <use xlink:href="img/sprite.svg#icon-toy"></use>
               </svg>
             </a>
           </li>

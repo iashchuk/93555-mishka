@@ -1,7 +1,7 @@
 .logo {
   display: block;
   width: 100%;
-  padding: 22px 5px 22px 116px;
+  padding: 22px 5px 22px 0;
   background-color: #ffffff;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
@@ -24,6 +24,7 @@
   display: block;
   width: 86px;
   height: 35px;
+  margin: 0 auto;
 
   &[href]:hover,
   &[href]:focus {
