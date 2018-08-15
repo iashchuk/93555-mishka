@@ -1,0 +1,61 @@
+.advantages {
+  padding: 35px 0 20px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item {
+  width: 215px;
+  margin-bottom: 30px;
+  padding-top: 54px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  background-repeat: no-repeat;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--ecology {
+    background-image: url("../img/icon-feature-flower.svg");
+    background-position-x: 9px;
+  }
+
+  &--style {
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--like {
+    background-image: url("../img/icon-feature-heart.svg");
+    background-position: 8px 6px;
+  }
+
+  &--handmade {
+    background-image: url("../img/icon-feature-ball.svg");
+    background-position-x: 2px;
+  }
+
+  &--support {
+    width: 260px;
+    background-image: url("../img/icon-feature-rocket.svg");
+
+  }
+
+  &--gift {
+    background-image: url("../img/icon-feature-gift.svg");
+    background-position-x: 4px;
+  }
+}
