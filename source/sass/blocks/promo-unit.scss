@@ -12,17 +12,18 @@
   }
 }
 
-.promo-unit__svg {
+.promo-unit__icon {
   position: absolute;
   top: 50%;
   fill: rgba(20, 144, 128, 0.5);
   transform: translateY(-50%);
 }
-.promo-unit__svg--interior {
+
+.promo-unit__icon--interior {
   right: 37px;
 }
 
-.promo-unit__svg--toy {
+.promo-unit__icon--toy {
   right: 27px;
 
    @include tablet {
@@ -49,7 +50,7 @@
     padding-top: 19px;
     padding-bottom: 40px;
 
-    .promo-unit__svg {
+    .promo-unit__icon {
       fill: rgba(20, 144, 128, 0.7);
       top: calc(50% - 5px);
     }
@@ -58,7 +59,7 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
 
-    .promo-unit__svg {
+    .promo-unit__icon {
       fill: rgba(20, 144, 128, 0.3);
     }
   }
