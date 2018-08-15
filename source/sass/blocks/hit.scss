@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 100px;
   padding: 28px 0 30px;
 
   &::after {
@@ -24,7 +25,6 @@
       left: -50px;
       width: 773px;
       height: 15px;
-      background-image: url("../img/zigzag-line-tablet.png");
     }
   }
 
@@ -38,7 +38,6 @@
       left: 0;
       width: 1050px;
       height: 23px;
-      background-image: url("../img/zigzag-line-desktop.png");
     }
   }
 }
