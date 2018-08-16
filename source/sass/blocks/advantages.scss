@@ -5,6 +5,13 @@
     padding-top: 50px;
     padding-bottom: 29px;
   }
+
+  @include desktop {
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 34px;
+  }
 }
 
 .advantages__title {
@@ -17,6 +24,13 @@
   @include tablet {
     margin-bottom: 50px;
     margin-left: -5px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -46,6 +60,11 @@
     margin-bottom: 56px;
     font-size: 20px;
     line-height: 22px;
+  }
+
+  @include desktop {
+    width: 350px;
+    margin-bottom: 57px;
   }
 
   &:last-child {
@@ -90,6 +109,10 @@
     @include tablet {
       order: 3;
       width: 334px;
+    }
+
+    @include desktop {
+      width: 350px;
     }
   }
 
