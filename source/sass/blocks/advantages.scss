@@ -1,5 +1,10 @@
 .advantages {
   padding: 35px 0 20px;
+
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 29px;
+  }
 }
 
 .advantages__title {
@@ -8,12 +13,23 @@
   padding: 0;
   font-size: 25px;
   line-height: 30px;
+
+  @include tablet {
+    margin-bottom: 50px;
+    margin-left: -5px;
+  }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .advantages__item {
@@ -24,6 +40,13 @@
   font-weight: 700;
   line-height: 20px;
   background-repeat: no-repeat;
+
+  @include tablet {
+    width: 334px;
+    margin-bottom: 56px;
+    font-size: 20px;
+    line-height: 22px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -36,26 +59,45 @@
 
   &--style {
     background-image: url("../img/icon-feature-money.svg");
+
+    @include tablet {
+      order: 2;
+    }
   }
 
   &--like {
     background-image: url("../img/icon-feature-heart.svg");
     background-position: 8px 6px;
+
+    @include tablet {
+      order: 4;
+    }
   }
 
   &--handmade {
     background-image: url("../img/icon-feature-ball.svg");
     background-position-x: 2px;
+
+    @include tablet {
+      order: 1;
+    }
   }
 
   &--support {
     width: 260px;
     background-image: url("../img/icon-feature-rocket.svg");
 
+    @include tablet {
+      order: 3;
+      width: 334px;
+    }
   }
 
   &--gift {
     background-image: url("../img/icon-feature-gift.svg");
     background-position-x: 4px;
+    @include tablet {
+      order: 5;
+    }
   }
 }
