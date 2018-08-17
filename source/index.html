@@ -153,8 +153,37 @@
         </div>
         <a class="review__button button" href="#">Написать</a>
       </section>
-
     </div>
+
+    <section class="page__contacts contacts">
+      <div class="contacts__wrapper page__container">
+        <h2 class="contacts__title">Контакты</h2>
+        <dl class="contacts__list">
+          <div class="contacts__item">
+            <dt class="contacts__type">e-mail:</dt>
+            <dd class="contacts__value">
+              <a class="contacts__link" href="#">info@mimimishkashop.ru</a>
+            </dd>
+          </div>
+          <div class="contacts__item">
+            <dt class="contacts__type">адрес:</dt>
+            <dd class="contacts__value contacts__value--adress">
+              г. Санкт-Петербург,ул. Большая Конюшенная,д. 19/8, офис 101
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <div class="contacts__map" id="map">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.jpg 1x, img/content/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/content/map-tablet@1x.jpg 1x, img/content/map-tablet@2x.jpg 2x">
+          <img class="contacts__image" src="img/content/map-mobile@1x.jpg" srcset="img/content/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        </picture>
+      </div>
+      <a class="contacts__button button" href="#">Напишите нам</a>
+    </section>
+
+  </main>
   </main>
 
   <script src="js/script.min.js"></script>
