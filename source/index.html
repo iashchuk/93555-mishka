@@ -231,6 +231,25 @@
     </div>
   </footer>
 
+  <section class="page__order order">
+    <div class="order__overlay"></div>
+    <form class="order__form" method="post" action="https://echo.htmlacademy.ru">
+      <h2 class="order__title">Добавить в корзину</h2>
+      <fieldset class="order__fieldset">
+        <legend class="order__legend">Выберете размер:</legend>
+        <div class="order__wrapper">
+          <input class="order__input visually-hidden" id="size-s" type="radio" name="size" value="s" checked>
+          <label class="order__label" for="size-s">S</label>
+          <input class="order__input visually-hidden" id="size-m" type="radio" name="size" value="m">
+          <label class="order__label" for="size-m">M</label>
+          <input class="order__input visually-hidden" id="size-l" type="radio" name="size" value="l">
+          <label class="order__label" for="size-l">L</label>
+        </div>
+      </fieldset>
+      <button class="order__button button button--green" type="submit">Добавить</button>
+    </form>
+  </section>
+
   <script src="js/script.min.js"></script>
 </body>
 
