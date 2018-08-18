@@ -1,0 +1,95 @@
+.contacts {
+  padding: 40px 0 34px;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+  font-size: 18px;
+      font-weight: 700;
+  line-height: 30px;
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.contacts__item {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  display: flex;
+}
+
+.contacts__type {
+  width: 70px;
+  margin-right: 6px;
+  word-wrap: break-word;
+}
+
+.contacts__value {
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  &_adress {
+    width: 145px;
+  }
+}
+
+.contacts__link {
+  padding-bottom: 3px;
+  color: #444444;
+  border-bottom: 1px solid #62d1ba;
+  &:hover,
+  &:focus {
+    color: #46c1ae;
+    border-bottom: 1px solid #46c1ae;
+  }
+  &:active {
+    color: rgba(70, 193, 174, 0.3);
+    border-bottom: 1px solid rgba(70, 193, 174, 0.1);
+  }
+}
+
+.contacts__map {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 457px;
+  margin-bottom: 38px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 143px;
+    right: 114px;
+    z-index: -1;
+    width: 67px;
+    height: 100px;
+    background-image: url("../img/icon-map-pin.svg");
+  }
+}
+
+.contacts__image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -2;
+  width: 320px;
+  height: auto;
+  max-height: 457px;
+  overflow: hidden;
+  transform: translateX(-50%);
+}
+
+.contacts__button {
+  width: 260px;
+  margin: 0 auto 5px;
+  font-size: 18px;
+}

@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 36px 0 40px;
-  margin-left: 175px;
 
   @include tablet {
     padding-top: 78px;
@@ -13,6 +12,7 @@
 
   @include desktop {
     width: 875px;
+    margin-left: 175px;
     padding-top: 68px;
     padding-bottom: 154px;
   }
