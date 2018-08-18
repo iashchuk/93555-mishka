@@ -4,10 +4,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 36px 0 40px;
+  margin-left: 175px;
 
   @include tablet {
     padding-top: 78px;
     padding-bottom: 100px;
+  }
+
+  @include desktop {
+    width: 875px;
+    padding-top: 68px;
+    padding-bottom: 154px;
   }
 
   &::after {
@@ -25,6 +32,12 @@
       width: 773px;
       height: 15px;
     }
+
+    @include desktop {
+      left: -176px;
+      width: 1050px;
+      height: 23px;
+    }
   }
 
   &::before {
@@ -39,9 +52,14 @@
       background-color: #e9e9e9;
       background-image: url("../img/review@1x.jpg");
       background-size: 350px auto;
+
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         background-image: url("../img/review@2x.jpg");
       }
+    }
+
+    @include desktop {
+      left: -175px;
     }
   }
 }
@@ -59,6 +77,10 @@
     margin-left: -5px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @include desktop {
+    margin-bottom: 49px;
   }
 }
 
@@ -86,6 +108,11 @@
     margin-bottom: 58px;
     font-size: 17px;
   }
+
+  @include desktop {
+    width: 775px;
+    margin-bottom: 40px;
+  }
 }
 
 .review__author {
@@ -108,6 +135,10 @@
     margin-bottom: 2px;
     font-size: 18px;
   }
+
+  @include desktop {
+    font-size: 17px;
+  }
 }
 
 .review__email {
@@ -121,6 +152,10 @@
     position: absolute;
     right: 12px;
     bottom: 134px;
+  }
+
+  @include desktop {
+    bottom: 188px;
   }
 }
 
@@ -170,5 +205,9 @@
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 17px;
+  }
+
+  @include desktop {
+    margin-top: 8px;
   }
 }
