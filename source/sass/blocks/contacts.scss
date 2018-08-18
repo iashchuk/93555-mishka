@@ -4,12 +4,37 @@
   @include tablet {
     padding: 60px 0 50px;
   }
+
+  @include desktop {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1150px;
+    padding: 72px 50px 104px;
+  }
 }
 
 .contacts__wrapper {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+
   @include tablet {
     position: relative;
-    &::before {
+    min-width: 768px;
+    padding: 0 50px;
+  }
+
+  @include desktop {
+    width: 350px;
+    min-width: auto;
+    margin-left: 175px;
+    padding: 0;
+    padding-top: 69px;
+  }
+
+  &::before {
+    @include tablet {
       content: "";
       position: absolute;
       top: -14px;
@@ -17,6 +42,11 @@
       width: 47px;
       height: 81px;
       background-image: url("../img/icon-flag.svg");
+    }
+
+    @include desktop {
+      top: 61px;
+      left: -112px;
     }
   }
 }
@@ -34,6 +64,11 @@
     margin-left: -5px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -112,6 +147,11 @@
     margin-bottom: 56px;
   }
 
+  @include desktop {
+    width: 525px;
+    margin: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -125,6 +165,11 @@
     @include tablet {
       top: 139px;
       right: 338px;
+    }
+
+    @include desktop {
+      top: 145px;
+      right: 219px;
     }
   }
 }
@@ -143,6 +188,12 @@
   @include tablet {
     width: 768px;
   }
+
+  @include desktop {
+    width: 525px;
+    left: 0;
+    transform: translate(0);
+  }
 }
 
 .contacts__button {
@@ -153,5 +204,11 @@
   @include tablet {
     width: 230px;
     font-size: 17px;
+  }
+
+  @include desktop {
+    position: absolute;
+    bottom: 100px;
+    left: 225px;
   }
 }
