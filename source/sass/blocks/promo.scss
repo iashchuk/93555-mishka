@@ -1,36 +1,41 @@
 .promo {
   @include tablet {
     position: relative;
+
     margin-bottom: 100px;
+
     background-color: #f9f9f9;
 
     &::after {
       content: "";
       position: absolute;
       bottom: -1px;
-      left: -6px;
+      left: -5px;
+
       width: 100%;
       height: 15px;
+
       background-image: url("../img/bg-zigzag-fill.svg");
       background-size: auto 23px;
     }
   }
+  @include desktop {
+    margin-bottom: 100px;
 
-   @include desktop {
-     margin-bottom: 100px;
-
-     &::after {
-      left: -12px;
+    &::after {
+      left: 12px;
+      bottom: 0px;
       height: 22px;
+
       background-size: auto 37px;
-     }
-   }
+    }
+  }
 }
 
 .promo__tagline {
   min-height: 282px;
   margin: 0;
-  padding: 68px 38px 10px;
+  padding: 71px 38px 10px;
 
   font-weight: 700;
   font-size: 27px;
@@ -40,12 +45,8 @@
   background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center -20px;
+  background-position: center -17px;
   background-size: 575px auto;
-
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/hero-mobile@2x.jpg");
-  }
 
   @include tablet {
     min-height: 558px;
@@ -62,16 +63,21 @@
       background-image: url("../img/hero-tablet@2x.jpg");
     }
   }
-
   @include desktop {
     min-height: 559px;
+
     font-size: 53px;
     line-height: 57px;
+
     background-image: url("../img/hero-desktop@1x.jpg");
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
     }
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
   }
 }
 
@@ -86,9 +92,9 @@
 
   @include tablet {
     position: relative;
+
     width: 668px;
   }
-
   @include desktop {
     width: 1050px;
   }
