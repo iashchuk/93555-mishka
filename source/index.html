@@ -7,6 +7,42 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
+      <!-- Pixel Glass -->
+      <style>
+        HTML {
+          background-repeat: no-repeat;
+          background-position: 50% 0;
+          /* По умолчанию мобильный макет */
+          background-image: url("img/pixel_glass/index-mobile.png");
+        }
+
+        /* Планшет */
+
+        @media ( min-width: 768px) {
+          HTML {
+            /* Планшетный макет */
+            background-image: url("img/pixel_glass/index-tablet.png");
+          }
+        }
+
+        /* Десктоп */
+
+        @media ( min-width: 1150px) {
+          HTML {
+            /* Десктопный макет */
+            background-image: url("img/pixel_glass/index-desktop.png");
+
+          }
+        }
+
+        BODY {
+          opacity: .5;
+        }
+      </style>
+
+      <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+      <script src="../node_modules/pixel-glass/script.js"></script>
+      <!-- // Pixel Glass -->
 </head>
 
 <body class="page">
@@ -66,8 +102,7 @@
     <section class="page__promo promo">
       <h2 class="visually-hidden">Наши основные разделы</h2>
       <div class="page__container page__container--nopadding">
-        <p class="promo__tagline">Милые штуки ручной
-          <br>работы для дома</p>
+        <p class="promo__tagline">Милые штуки ручной<br>работы для дома</p>
         <ul class="promo__list">
           <li class="promo__item promo-unit">
             <a class="promo-unit__link promo-unit__link--interior" href="#">
@@ -250,7 +285,7 @@
     </form>
   </section>
 
-  <script src="js/script.min.js"></script>
+  <!-- <script src="js/script.min.js"></script> -->
 </body>
 
 </html>

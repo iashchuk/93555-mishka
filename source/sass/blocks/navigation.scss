@@ -3,16 +3,19 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
- }
+}
 
 .navigation__logo {
   @include tablet {
     margin-left: -50px;
+    padding-bottom: 19px;
+    padding-left: 50px;
   }
 
   @include desktop {
     order: 2;
     margin-left: 0;
+    padding: 10px 5px 6px 57px;
   }
 }
 
@@ -68,7 +71,6 @@
     margin-right: -50px;
   }
 }
-
 
 .navigation__special {
   display: none;

@@ -97,7 +97,9 @@
 
 .menu__link {
   display: block;
-  text-align: center;
+  padding: 27px 10px;
+  padding-left: 76px;
+  text-align: left;
   color: #000000;
 
   &:hover[href],
@@ -111,8 +113,6 @@
 }
 
 .menu__link--site {
-  padding: 28px 10px 27px 10px;
-
   @include tablet {
     padding-top: 17px;
     padding-left: 0;
@@ -121,13 +121,14 @@
   }
   @include desktop {
     padding-top: 30px;
+    padding-bottom: 30px;
     font-size: 17px;
   }
 }
 
 .menu__link--user {
   position: relative;
-  padding: 28px 55px 27px;
+
   @include tablet {
     min-height: 88px;
     padding: 30px 0 28px 10px;
@@ -170,7 +171,7 @@
   }
 
   &--cart {
-    top: 31px;
+    top: 301px;
     left: 30px;
 
     @include tablet {
