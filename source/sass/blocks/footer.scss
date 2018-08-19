@@ -5,6 +5,10 @@
     padding-top: 54px;
     padding-bottom: 52px;
   }
+
+  @include desktop {
+    padding-top: 52px;
+  }
 }
 
 .footer__wrapper {
@@ -19,6 +23,11 @@
 }
 
 .footer__logo {
-  margin-top: -1px;
-  margin-right: 76px;
+  display: none;
+
+  @include tablet {
+    display: block;
+    margin-top: -1px;
+    margin-right: 76px;
+  }
 }
