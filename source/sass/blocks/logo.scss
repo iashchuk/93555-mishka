@@ -20,6 +20,27 @@
   }
 }
 
+.logo--footer {
+  width: 102px;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: transparent;
+  border: none;
+
+  &:hover[href],
+  &:focus[href] {
+    .logo__image--footer {
+      fill: #46c1ae;
+    }
+  }
+  &[href]:active {
+    .logo__image--footer {
+      fill: rgba(70, 193, 174, 0.3);
+    }
+  }
+}
+
+
 .logo__link {
   display: block;
   width: 86px;
