@@ -9,6 +9,13 @@
   padding: 26px 5px 20px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+
+  @include tablet {
+    align-items: flex-end;
+    width: 300px;
+    padding: 0 5px;
+    border: none;
+  }
 }
 
 .social__item {

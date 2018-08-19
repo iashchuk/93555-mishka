@@ -8,11 +8,20 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 19px;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .copyright__link {
   margin-left: 30px;
   padding-top: 2px;
+
+  @include tablet {
+    padding-top: 6px;
+  }
+
   &:hover,
   &:focus {
     .copyright__icon {

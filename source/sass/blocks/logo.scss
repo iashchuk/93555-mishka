@@ -21,9 +21,9 @@
 }
 
 .logo--footer {
+  display: block;
   width: 102px;
-  padding-right: 0;
-  padding-left: 0;
+  padding: 0;
   background-color: transparent;
   border: none;
 
@@ -77,4 +77,9 @@
     width: 155px;
     height: 72px;
   }
+}
+
+.logo__image--footer {
+  width: auto;
+  height: auto;
 }

@@ -1,9 +1,24 @@
 .footer {
   background-color: #f1f1f1;
+
+  @include tablet {
+    padding-top: 54px;
+    padding-bottom: 52px;
+  }
 }
 
 .footer__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include tablet {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer__logo {
+  margin-top: -1px;
+  margin-right: 76px;
 }
