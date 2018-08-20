@@ -30,6 +30,10 @@
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   transform: translate(-50%, -50%);
+
+  @include tablet {
+    width: 566px;
+  }
 }
 
 .order__title {
@@ -42,6 +46,12 @@
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
+
+  @include tablet {
+    width: 355px;
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .order__fieldset {
@@ -51,14 +61,21 @@
   padding: 0;
 
   border: none;
+
+   @include tablet {
+     width: 355px;
+   }
 }
 
 .order__button {
   width: 100%;
   padding: 16px 10px;
   line-height: 16px;
-}
 
+  @include tablet {
+    width: 350px;
+  }
+}
 
 .order__wrapper {
   display: flex;
@@ -74,6 +91,10 @@
   line-height: 30px;
   text-align: center;
   color: #444444;
+
+  @include tablet {
+    font-size: 17px;
+  }
 }
 
 .order__label {
@@ -88,6 +109,10 @@
   text-transform: uppercase;
 
   border: 2px solid rgba(68, 68, 68, 0.1);
+
+  @include tablet {
+    width: 112px;
+  }
 
   &:last-child {
     margin-right: 0;
