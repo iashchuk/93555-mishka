@@ -1,5 +1,5 @@
 .order {
-  display: none;
+  display: block;
 }
 
 .order__overlay {
@@ -24,7 +24,7 @@
   flex-direction: column;
   align-items: center;
   width: 320px;
-  padding: 36px 30px 47px;
+  padding: 30px 30px 47px 30px;
 
   background-color: #ffffff;
   border: 1px solid #c6c6c6;
@@ -34,16 +34,20 @@
 
 .order__title {
   width: 148px;
-  margin-bottom: 28px;
+  margin: 0;
+  margin-bottom: 12px;
 
   text-align: center;
   text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
 }
 
 .order__fieldset {
   display: flex;
   width: 260px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   padding: 0;
 
   border: none;
@@ -51,7 +55,7 @@
 
 .order__button {
   width: 100%;
-
+  padding: 16px 10px;
   line-height: 16px;
 }
 
@@ -63,7 +67,7 @@
 
 .order__legend {
   width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 
   font-weight: 400;
   font-size: 15px;
@@ -76,7 +80,7 @@
   width: 82px;
   margin-right: 7px;
   margin-bottom: 5px;
-  padding: 18px 5px;
+  padding: 16px 5px;
 
   line-height: 16px;
   text-align: center;
