@@ -1,43 +1,50 @@
 .hit {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   margin-bottom: 100px;
-  padding: 28px 0 30px;
+  padding: 28px 30px 36px 30px;
 
   &::after {
     content: "";
+    display: block;
     position: absolute;
-    left: -30px;
-    bottom: -8px;
-    width: 320px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
+    background-repeat: repeat;
   }
 
   @include tablet {
+    width: 668px;
+    max-width: none;
+    padding: 0;
     padding-top: 16px;
     padding-bottom: 62px;
 
     &::after {
-      bottom: -1px;
-      left: -50px;
-      width: 773px;
-      height: 15px;
+      bottom: 0;
+      height: 13px;
     }
   }
 
   @include desktop {
-    justify-content: flex-end;
-    width: 700px;
+    position: relative;
+    width: 1050px;
     padding-top: 18px;
     padding-bottom: 90px;
+    overflow: hidden;
 
     &::after {
-      left: 0;
-      width: 1050px;
-      height: 23px;
+      left: -22px;
+      width: 1072px;
+      height: 21px;
     }
   }
 }
@@ -77,7 +84,7 @@
   @include desktop {
     order: 2;
     width: 350px;
-    margin-right: 175px;
+    margin-left: 175px;
   }
 }
 
@@ -86,10 +93,11 @@
   margin: 0;
   margin-bottom: 23px;
   padding: 0;
+  font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  color: #63d1bb;
   text-transform: uppercase;
+  color: #63d1bb;
 
   @include tablet {
     width: 125px;
@@ -102,6 +110,7 @@
 
   @include desktop {
     width: 85px;
+    margin-left: 39px;
     padding-top: 15px;
   }
 }
@@ -110,8 +119,9 @@
   margin: 0;
   margin-bottom: 17px;
   padding: 0;
-  font-weight: 400;
   font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
   color: #444444;
 
   @include tablet {
@@ -127,6 +137,7 @@
 }
 
 .hit__spec {
+  margin: 0 auto;
   margin-bottom: 28px;
   font-weight: 400;
   font-size: 15px;
@@ -134,6 +145,7 @@
   color: #444444;
 
   @include tablet {
+    margin: 0;
     margin-bottom: 56px;
   }
 
@@ -143,24 +155,21 @@
 }
 
 .hit__image {
-  width: 260px;
   max-width: none;
   height: auto;
-  margin-bottom: 19px;
+  margin-bottom: 22px;
   overflow: hidden;
 
   @include tablet {
     position: absolute;
     top: 9px;
     right: -332px;
-    width: 333px;
   }
 
   @include desktop {
     top: -158px;
     right: -524px;
     z-index: -1;
-    width: 525px;
   }
 }
 
@@ -169,7 +178,9 @@
   margin-bottom: 26px;
   padding: 0;
   text-align: center;
+  font-size: 17px;
   font-weight: 700;
+  line-height: 24px;
   color: #444444;
 
   @include tablet {
