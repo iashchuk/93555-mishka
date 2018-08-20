@@ -1,7 +1,12 @@
 .contacts {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   padding: 36px 0;
 
   @include tablet {
+    width: auto;
+    max-width: none;
     padding: 61px 0 50px;
   }
 

@@ -12,6 +12,14 @@
   }
 }
 
+.promo-unit--interior {
+  background-color: #63d1bb;
+}
+
+.promo-unit--toys {
+  background-color: #56c3b2;
+}
+
 .promo-unit__icon {
   position: absolute;
   top: 50%;
@@ -27,13 +35,13 @@
 .promo-unit__icon--toy {
   right: 27px;
 
-   @include tablet {
-     right: 34px;
-   }
+  @include tablet {
+    right: 34px;
+  }
 
-   @include desktop {
-     right: 36px;
-   }
+  @include desktop {
+    right: 36px;
+  }
 }
 
 .promo-unit__link {
@@ -44,6 +52,16 @@
   font-size: 19px;
   font-weight: 700;
   color: #ffffff;
+
+  @include mobile-wide {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    width: 100%;
+    margin: 0;
+  }
 
   &:hover,
   &:focus {

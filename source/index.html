@@ -7,42 +7,43 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
-      <!-- Pixel Glass -->
-      <style>
-        HTML {
-          background-repeat: no-repeat;
-          background-position: 50% 0;
-          /* По умолчанию мобильный макет */
-          background-image: url("img/pixel_glass/mishka-modal-mobile.png");
-        }
+  <!-- Pixel Glass -->
+  <!-- <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url("img/pixel_glass/index-mobile.png");
+    }
 
-        /* Планшет */
+    /* Планшет */
 
-        @media ( min-width: 768px) {
-          HTML {
-            /* Планшетный макет */
-            background-image: url("img/pixel_glass/mishka-modal-tablet.png");
-          }
-        }
+    @media ( min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("img/pixel_glass/index-tablet.png");
+      }
+    }
 
-        /* Десктоп */
+    /* Десктоп */
 
-        @media ( min-width: 1150px) {
-          HTML {
-            /* Десктопный макет */
-            background-image: url("img/pixel_glass/mishka-modal-desktop.png");
+    @media ( min-width: 1150px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("img/pixel_glass/index-desktop.png");
 
-          }
-        }
+      }
+    }
 
-        BODY {
-          opacity: .5;
-        }
-      </style>
+    BODY {
+      opacity: .5;
+    }
 
-      <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-      <script src="../node_modules/pixel-glass/script.js"></script>
-      <!-- // Pixel Glass -->
+  </style>
+
+  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+  <script src="../node_modules/pixel-glass/script.js"></script> -->
+  <!-- // Pixel Glass -->
 </head>
 
 <body class="page">
@@ -102,9 +103,10 @@
     <section class="page__promo promo">
       <h2 class="visually-hidden">Наши основные разделы</h2>
       <div class="page__container page__container--nopadding">
-        <p class="promo__tagline">Милые штуки ручной<br>работы для дома</p>
+        <p class="promo__tagline">Милые штуки ручной
+          <br>работы для дома</p>
         <ul class="promo__list">
-          <li class="promo__item promo-unit">
+          <li class="promo__item promo-unit promo-unit--interior">
             <a class="promo-unit__link promo-unit__link--interior" href="#">
               <p class="promo-unit__text">Предметы интерьера</p>
               <svg class="promo-unit__icon promo-unit__icon--interior" width="40" height="62">
@@ -112,7 +114,7 @@
               </svg>
             </a>
           </li>
-          <li class="promo__item promo-unit">
+          <li class="promo__item promo-unit promo-unit--toys">
             <a class="promo-unit__link promo-unit__link--toys" href="#">
               <p class="promo-unit__text">Детские игрушки</p>
               <svg class="promo-unit__icon promo-unit__icon--toy" width="60" height="60">
@@ -145,15 +147,15 @@
           </table>
           <picture>
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <source media="(min-width: 375px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img class="hit__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
           </picture>
           <p class="hit__price">Цена: 990 руб.</p>
           <a class="hit__button button" href="#">Заказать</a>
         </div>
       </section>
-      </div>
-      <div class="page__container">
+    </div>
+    <div class="page__container">
       <section class="page__advantages advantages">
         <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
@@ -165,15 +167,15 @@
           <li class="advantages__item advantages__item--gift">Поставляется в подарочной&nbsp;упаковке</li>
         </ul>
       </section>
-      </div>
-      <div class="page__container page__container--nopadding page__container--review">
+    </div>
+    <div class="page__container page__container--nopadding page__container--review">
       <section class="page__review review">
         <h2 class="review__title">Отзывы</h2>
         <blockquote class="review__content">
           <p class="review__text">
             Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии,
-            я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше
-            лайков!
+            я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают
+            больше лайков!
           </p>
           <cite class="review__author">
             <span class="review__name">Анастасия Красильникова</span>

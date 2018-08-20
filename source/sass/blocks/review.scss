@@ -1,5 +1,4 @@
 .review {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -14,7 +13,6 @@
   @include desktop {
     position: relative;
     width: 100%;
-    // margin-left: 175px;
     padding-left: 175px;
     padding-top: 71px;
     padding-bottom: 154px;
@@ -156,10 +154,15 @@
 }
 
 .review__slider {
+  @include mobile-wide {
+    margin-right: 20px;
+  }
+
   @include tablet {
     position: absolute;
     right: 63px;
     bottom: 131px;
+    margin: 0;
   }
 
   @include desktop {
@@ -208,13 +211,17 @@
   margin-bottom: 5px;
   font-size: 18px;
 
-  @include tablet {
+  @include mobile-wide {
     align-self: flex-start;
-    width: 175px;
+    width: 260px;
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 17px;
   }
+
+    @include tablet {
+      width: 175px;
+    }
 
   @include desktop {
     margin-top: 8px;

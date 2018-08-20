@@ -39,10 +39,16 @@
   padding: 0;
   list-style: none;
 
-  @include tablet {
+  @include mobile-wide {
+    margin: 0 auto;
+    padding: 0 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @include tablet {
+    padding: 0;
   }
 }
 
@@ -55,8 +61,13 @@
   line-height: 20px;
   background-repeat: no-repeat;
 
+  @include mobile-wide {
+    margin-right: 20px;
+  }
+
   @include tablet {
     width: 334px;
+    margin-right: 0;
     margin-bottom: 54px;
     font-size: 20px;
     line-height: 22px;
@@ -107,6 +118,10 @@
     width: 260px;
     background-image: url("../img/icon-feature-rocket.svg");
     background-position: -2px 5px;
+
+    @include mobile-wide {
+      width: 215px;
+    }
 
     @include tablet {
       order: 3;

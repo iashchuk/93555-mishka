@@ -4,6 +4,12 @@
   line-height: $line-height;
 }
 
+@mixin mobile-wide {
+  @media (min-width: #{$width-mobile-wide}) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: #{$width-tablet}) {
     @content;
