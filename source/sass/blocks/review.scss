@@ -1,42 +1,48 @@
 .review {
-  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 36px 0 40px;
+  padding: 36px 30px 45px 30px;
 
   @include tablet {
-    padding-top: 78px;
+    padding: 0;
+    padding-top: 79px;
     padding-bottom: 100px;
   }
 
   @include desktop {
-    width: 875px;
-    margin-left: 175px;
-    padding-top: 68px;
+    position: relative;
+    width: 100%;
+    // margin-left: 175px;
+    padding-left: 175px;
+    padding-top: 71px;
     padding-bottom: 154px;
+    overflow: hidden;
   }
 
   &::after {
     content: "";
     position: absolute;
-    left: -30px;
-    bottom: -5px;
-    width: 320px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
+    background-repeat: repeat;
 
     @include tablet {
-      bottom: -1px;
-      left: -50px;
-      width: 773px;
-      height: 15px;
+      bottom: 0;
+      height: 13px;
     }
 
     @include desktop {
-      left: -176px;
-      width: 1050px;
-      height: 23px;
+     left: -22px;
+     width: 1072px;
+     height: 21px;
+
     }
   }
 
@@ -59,7 +65,7 @@
     }
 
     @include desktop {
-      left: -175px;
+      left: 0;
     }
   }
 }
@@ -81,12 +87,14 @@
 
   @include desktop {
     margin-bottom: 49px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
 .review__content {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
   padding: 0;
 
   @include tablet {
@@ -105,7 +113,7 @@
   color: #444444;
 
   @include tablet {
-    margin-bottom: 58px;
+    margin-bottom: 59px;
     font-size: 17px;
   }
 
@@ -150,12 +158,13 @@
 .review__slider {
   @include tablet {
     position: absolute;
-    right: 12px;
-    bottom: 134px;
+    right: 63px;
+    bottom: 131px;
   }
 
   @include desktop {
-    bottom: 188px;
+    right: 13px;
+    bottom: 185px;
   }
 }
 

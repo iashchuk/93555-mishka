@@ -33,6 +33,11 @@
   position: relative;
 }
 
+.page__container--review {
+  position: relative;
+  overflow: hidden;
+}
+
 .page__title {
   margin: 0;
   padding: 68px 10px 76px;
