@@ -1,8 +1,8 @@
 .advantages {
-  padding: 35px 0 20px;
+  padding: 28px 0 20px 0;
 
   @include tablet {
-    padding-top: 50px;
+    padding-top: 52px;
     padding-bottom: 29px;
   }
 
@@ -22,7 +22,7 @@
   line-height: 30px;
 
   @include tablet {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     margin-left: -5px;
     font-size: 43px;
     line-height: 50px;
@@ -48,8 +48,8 @@
 
 .advantages__item {
   width: 215px;
-  margin-bottom: 30px;
-  padding-top: 54px;
+  margin-bottom: 27px;
+  padding-top: 56px;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -57,14 +57,14 @@
 
   @include tablet {
     width: 334px;
-    margin-bottom: 56px;
+    margin-bottom: 54px;
     font-size: 20px;
     line-height: 22px;
   }
 
   @include desktop {
     width: 350px;
-    margin-bottom: 57px;
+    margin-bottom: 55px;
   }
 
   &:last-child {
@@ -78,6 +78,7 @@
 
   &--style {
     background-image: url("../img/icon-feature-money.svg");
+    background-position-y: 2px;
 
     @include tablet {
       order: 2;
@@ -86,7 +87,7 @@
 
   &--like {
     background-image: url("../img/icon-feature-heart.svg");
-    background-position: 8px 6px;
+    background-position: 8px 7px;
 
     @include tablet {
       order: 4;
@@ -95,7 +96,7 @@
 
   &--handmade {
     background-image: url("../img/icon-feature-ball.svg");
-    background-position-x: 2px;
+    background-position: 2px 6px;
 
     @include tablet {
       order: 1;
@@ -105,6 +106,7 @@
   &--support {
     width: 260px;
     background-image: url("../img/icon-feature-rocket.svg");
+    background-position: -2px 5px;
 
     @include tablet {
       order: 3;
@@ -118,7 +120,8 @@
 
   &--gift {
     background-image: url("../img/icon-feature-gift.svg");
-    background-position-x: 4px;
+    background-position: 4px 5px;
+
     @include tablet {
       order: 5;
     }
