@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Academy: Мишка - Каталог</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+
+<body class="page">
+  <header class="page__header page__header--main">
+    <nav class="navigation page__container page__container--nopadding">
+      <div class="navigation__logo logo">
+        <a class="logo__link" href="index.html">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина">
+          </picture>
+        </a>
+      </div>
+      <button class="navigation__toggle navigation__toggle--off" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+      <ul class="navigation__site menu menu--site">
+        <li class="menu__item menu__item--site menu__item--catalog">
+          <a class="menu__link menu__link--site" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="menu__item menu__item--site">
+          <a class="menu__link menu__link--site" href="form.html">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="navigation__user menu menu--user">
+        <li class="menu__item menu__item--user menu__item--search">
+          <a class="menu__link menu__link--user" href="#">
+            <svg class="menu__icon menu__icon--search" width="18" height="18">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+            <span class="menu__span">Поиск по сайту</span>
+          </a>
+        </li>
+        <li class="menu__item menu__item--user menu__item--cart">
+          <a class="menu__link menu__link--user" href="#">
+            <svg class="menu__icon menu__icon--cart" width="20" height="19">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+            Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <ul class="navigation__special menu menu--special">
+        <li class="menu__item menu__item--special">
+          <a class="menu__link menu__link--special" href="#">Новые поступления</a>
+        </li>
+        <li class="menu__item menu__item--special">
+          <a class="menu__link menu__link--special" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <p class="navigation__text navigation__text--main">Бесплатная доставка по России</p>
+    </nav>
+  </header>
+
+  <main class="page__main">
+    <h1 class="page__title">Каталог товаров</h1>
+
+  </main>
+
+  <footer class="page__footer footer">
+    <div class="page__container footer__wrapper">
+      <a class="footer__logo logo logo--footer" href="index.html">
+        <span class="visually-hidden">Мишка</span>
+        <svg class="logo__image logo__image--footer" width="102" height="34">
+          <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
+        </svg>
+      </a>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--insta" href="#">
+            <span class="visually-hidden">Instagram</span>
+            <svg class="social__icon" width="22" height="21">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <svg class="social__icon" width="15" height="28">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Twiiter</span>
+            <svg class="social__icon" width="23" height="20">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg class="copyright__icon" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+        <span class="copyright__text">Разработано</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
