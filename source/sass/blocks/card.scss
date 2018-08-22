@@ -1,7 +1,12 @@
 .card {
   display: flex;
   flex-wrap: wrap;
+  max-width: 260px;
   padding: 0;
+
+  @include tablet {
+    max-width: none;
+  }
 }
 
 .card__link {
@@ -22,6 +27,10 @@
   width: 260px;
   height: auto;
   overflow: hidden;
+
+  @include tablet {
+    width: 334px;
+  }
 }
 
 .card__title {
@@ -29,6 +38,11 @@
   margin: 0;
   padding: 0;
   font-size: 17px;
+
+  @include tablet {
+    width: 240px;
+    font-size: 20px;
+  }
 }
 
 .card__wrapper {
@@ -37,6 +51,15 @@
   padding: 26px 27px 0;
   border: 1px solid #ececec;
   overflow: hidden;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 334px;
+    min-height: 333px;
+    padding-top: 24px;
+    padding-bottom: 28px;
+  }
 }
 
 .card__description {
@@ -47,6 +70,10 @@
   font-size: 13px;
   line-height: 30px;
   color: #444444;
+
+  @include tablet {
+    font-size: 15px;
+  }
 }
 
 .card__order {
@@ -55,6 +82,12 @@
   padding-top: 21px;
   padding-bottom: 27px;
   border-top: 1px solid #ececec;
+
+  @include tablet {
+    flex-direction: row;
+    margin-top: auto;
+    padding: 21px 3px 0 5px;
+  }
 }
 
 .card__price {
@@ -62,6 +95,12 @@
   margin: 0;
   padding-right: 30px;
   font-size: 15px;
+
+  @include tablet {
+    width: 100px;
+    padding-right: 0;
+    font-size: 17px;
+  }
 }
 
 .card__button {
