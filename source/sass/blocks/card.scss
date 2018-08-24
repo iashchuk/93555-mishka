@@ -7,6 +7,11 @@
   @include tablet {
     max-width: none;
   }
+
+  @include desktop {
+    width: 315px;
+    flex-direction: column;
+  }
 }
 
 .card__link {
@@ -30,6 +35,10 @@
 
   @include tablet {
     width: 334px;
+  }
+
+  @include desktop {
+    width: 316px;
   }
 }
 
@@ -60,6 +69,13 @@
     padding-top: 24px;
     padding-bottom: 28px;
   }
+
+  @include desktop {
+    flex-grow: 1;
+    width: 315px;
+    min-height: 197px;
+    padding-left: 25px;
+  }
 }
 
 .card__description {
@@ -73,6 +89,11 @@
 
   @include tablet {
     font-size: 15px;
+  }
+
+  @include desktop {
+    margin-top: 5px;
+    margin-bottom: 0;
   }
 }
 
@@ -88,6 +109,11 @@
     margin-top: auto;
     padding: 21px 3px 0 5px;
   }
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 3px;
+  }
 }
 
 .card__price {
@@ -95,6 +121,7 @@
   margin: 0;
   padding-right: 30px;
   font-size: 15px;
+  font-weight: 700;
 
   @include tablet {
     width: 100px;
