@@ -77,6 +77,7 @@
 }
 
 .menu__item--catalog {
+
   @include desktop {
     width: 234px;
     padding-left: 50px;
@@ -133,7 +134,19 @@
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 17px;
+    background-color: transparent;
   }
+}
+
+
+.menu__link--gray {
+  @include tablet {
+    background-color: #f1f1f1;
+  }
+
+   @include desktop {
+     background-color: transparent;
+   }
 }
 
 .menu__link--user {
