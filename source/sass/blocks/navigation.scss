@@ -3,6 +3,15 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  @include tablet {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    max-width: 1150px;;
+  }
 }
 
 .navigation__logo {
