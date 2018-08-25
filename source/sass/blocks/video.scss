@@ -4,6 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 58px;
+  margin-bottom: 104px;
+  margin-left: 680px;
   padding: 22px 0 32px;
 
   border: 1px solid #ececec;
@@ -12,6 +14,12 @@
     width: 666px;
     padding-top: 0;
     padding-bottom: 46px;
+  }
+  @include desktop {
+    display: block;
+    width: 370px;
+    min-height: 455px;
+    padding: 92px 56px 60px 80px;
   }
 }
 
@@ -31,6 +39,10 @@
 
     font-size: 20px;
   }
+  @include desktop {
+    margin-bottom: 35px;
+    padding-left: 0;
+  }
 
   &::before {
     content: "";
@@ -47,6 +59,10 @@
       top: -5px;
       left: 41px;
     }
+    @include desktop {
+      top: -52px;
+      left: 0;
+    }
   }
 }
 
@@ -59,14 +75,12 @@
 
   background-color: #bcc9c9;
   background-image: url("../img/video-mobile@1x.jpg");
-  background-size: 260px auto;
   background-repeat: no-repeat;
+  background-size: 260px auto;
 
-    @media (min-resolution: 144dpi),
-    (min-resolution: 1.5dppx) {
-      background-image: url("../img/video-mobile@2x.jpg");
-    }
-
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 
   @include tablet {
     width: 100%;
@@ -80,7 +94,19 @@
       background-image: url("../img/video-tablet@2x.jpg");
     }
   }
+  @include desktop {
+    position: absolute;
+    top: -1px;
+    left: -682px;
 
+    width: 682px;
+
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-size: 682px auto;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
 }
 
 .video__description {
@@ -101,6 +127,10 @@
     font-size: 15px;
     line-height: 30px;
   }
+  @include desktop {
+    margin-bottom: 45px;
+    padding: 0;
+  }
 }
 
 .video__button {
@@ -110,6 +140,10 @@
   @include tablet {
     order: 3;
     width: 584px;
+  }
+  @include desktop {
+    width: 230px;
+    margin: 0;
   }
 }
 
