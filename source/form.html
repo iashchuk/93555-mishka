@@ -24,14 +24,14 @@
       <button class="navigation__toggle navigation__toggle--off" type="button">
         <span class="visually-hidden">Меню</span>
       </button>
-        <ul class="navigation__site menu menu--site">
-          <li class="menu__item menu__item--site menu__item--catalog">
-            <a class="menu__link menu__link--site menu__link--gray" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="menu__item menu__item--site">
-            <a class="menu__link menu__link--site menu__link--gray" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
+      <ul class="navigation__site menu menu--site">
+        <li class="menu__item menu__item--site menu__item--catalog">
+          <a class="menu__link menu__link--site menu__link--gray" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="menu__item menu__item--site">
+          <a class="menu__link menu__link--site menu__link--gray" href="form.html">Вязание на заказ</a>
+        </li>
+      </ul>
       <ul class="navigation__user menu menu--user">
         <li class="menu__item menu__item--user menu__item--search">
           <a class="menu__link menu__link--user" href="#">
@@ -63,6 +63,25 @@
 
   <main class="page__main">
     <h1 class="page__title">Вязание на заказ</h1>
+    <form class="page__knitwork knitwork" method="post" action="https://echo.htmlacademy.ru">
+      <h2 class="visually-hidden">Форма заказа</h2>
+      <p class="knitwork__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить
+        детали.
+      </p>
+      <div class="knitwork__field knitwork__field--type">
+        <h3 class="knitwork__legend">Тип</h3>
+        <ul class="knitwork__block knitwork-type">
+          <li class="knitwork-type__item">
+            <input class="knitwork-type__input visually-hidden" id="type-accessory" type="radio" name="type" value="accessory" checked>
+            <label class="knitwork-type__label" for="type-accessory">Аксессуар для интерьера</label>
+          </li>
+          <li class="knitwork-type__item">
+            <input class="knitwork-type__input visually-hidden" id="type-toy" type="radio" name="type" value="toy">
+            <label class="knitwork-type__label" for="type-toy">Детская игрушка</label>
+          </li>
+        </ul>
+      </div>
+    </form>
 
   </main>
 
