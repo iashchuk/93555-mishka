@@ -85,7 +85,7 @@
 
       <div class="knitwork__field knitwork__field--color">
         <h3 class="knitwork__legend">Цвет</h3>
-        <div class="knitwork__block knitwork-checkbox">
+        <ul class="knitwork__block knitwork-checkbox">
           <li class="knitwork-checkbox__item">
             <input class="knitwork-checkbox__input visually-hidden" id="checkbox-white" type="checkbox" name="white" checked>
             <label class="knitwork-checkbox__label" for="checkbox-white">Белый</label>
@@ -110,10 +110,28 @@
             <input class="knitwork-checkbox__input visually-hidden" id="checkbox-orange" type="checkbox" name="orange">
             <label class="knitwork-checkbox__label" for="checkbox-orange">Оранжевый</label>
           </li>
-        </div>
+        </ul>
       </div>
 
+      <div class="knitwork__field knitwork__field--name">
+        <h3 class="knitwork__legend">ФИО</h3>
+        <ul class="knitwork__block knitwork-entry">
+          <li class="knitwork-entry__item">
+            <label class="knitwork-entry__label" for="name">Имя:</label>
+            <input class="knitwork-entry__input" id="name" name="name" type="text" placeholder="Введите ваше имя*"
+              required>
+          </li>
+          <li class="knitwork-entry__item">
+            <label class="knitwork-entry__label" for="surname">Фамилия:</label>
+            <input class="knitwork-entry__input" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
+          </li>
+          <li class="knitwork-entry__item">
+            <label class="knitwork-entry__label" for="patronymic">Отчество:</label>
+            <input class="knitwork-entry__input" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+          </li>
+        </ul>
     </form>
+
 
   </main>
 
