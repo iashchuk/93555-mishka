@@ -65,7 +65,8 @@
     <h1 class="page__title">Вязание на заказ</h1>
     <form class="page__knitwork knitwork" method="post" action="https://echo.htmlacademy.ru">
       <h2 class="visually-hidden">Форма заказа</h2>
-      <p class="knitwork__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить
+      <p class="knitwork__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
+        мы свяжемся с вами, чтобы уточнить
         детали.
       </p>
 
@@ -73,7 +74,8 @@
         <h3 class="knitwork__legend">Тип</h3>
         <ul class="knitwork__block knitwork-radio">
           <li class="knitwork-radio__item">
-            <input class="knitwork-radio__input visually-hidden" id="type-accessory" type="radio" name="type" value="accessory" checked>
+            <input class="knitwork-radio__input visually-hidden" id="type-accessory" type="radio" name="type" value="accessory"
+              checked>
             <label class="knitwork-radio__label" for="type-accessory">Аксессуар для интерьера</label>
           </li>
           <li class="knitwork-radio__item">
@@ -87,11 +89,13 @@
         <h3 class="knitwork__legend">Цвет</h3>
         <ul class="knitwork__block knitwork-checkbox">
           <li class="knitwork-checkbox__item">
-            <input class="knitwork-checkbox__input visually-hidden" id="checkbox-white" type="checkbox" name="white" checked>
+            <input class="knitwork-checkbox__input visually-hidden" id="checkbox-white" type="checkbox" name="white"
+              checked>
             <label class="knitwork-checkbox__label" for="checkbox-white">Белый</label>
           </li>
           <li class="knitwork-checkbox__item">
-            <input class="knitwork-checkbox__input visually-hidden" id="checkbox-gray" type="checkbox" name="gray" checked>
+            <input class="knitwork-checkbox__input visually-hidden" id="checkbox-gray" type="checkbox" name="gray"
+              checked>
             <label class="knitwork-checkbox__label" for="checkbox-gray">Серый</label>
           </li>
           <li class="knitwork-checkbox__item">
@@ -118,11 +122,13 @@
         <ul class="knitwork__block knitwork-entry">
           <li class="knitwork-entry__item">
             <label class="knitwork-entry__label" for="entry-name">Имя:</label>
-            <input class="knitwork-entry__input" id="entry-name" name="name" type="text" placeholder="Введите ваше имя*" required>
+            <input class="knitwork-entry__input" id="entry-name" name="name" type="text" placeholder="Введите ваше имя*"
+              required>
           </li>
           <li class="knitwork-entry__item">
             <label class="knitwork-entry__label" for="entry-surname">Фамилия:</label>
-            <input class="knitwork-entry__input" id="entry-surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
+            <input class="knitwork-entry__input" id="entry-surname" name="surname" type="text" placeholder="Укажите фамилию*"
+              required>
           </li>
           <li class="knitwork-entry__item">
             <label class="knitwork-entry__label" for="entry-patronymic">Отчество:</label>
@@ -135,7 +141,8 @@
         <h3 class="knitwork__legend">Тел</h3>
         <div class="knitwork__block knitwork-entry">
           <label class="knitwork-entry__label visually-hidden" for="entry-number">Введите номер телефона</label>
-          <input class="knitwork-entry__input" id="entry-number" name="phone-number" type="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+          <input class="knitwork-entry__input" id="entry-number" name="phone-number" type="tel" placeholder="+7 ХХХ ХХ ХХ*"
+            required>
           <svg class="knitwork-entry__icon" width="25" height="24">
             <use xlink:href="img/sprite.svg#icon-phone"></use>
           </svg>
@@ -146,10 +153,19 @@
         <h3 class="knitwork__legend">E-mail</h3>
         <div class="knitwork__block knitwork-entry">
           <label class="knitwork-entry__label visually-hidden" for="entry-mail">Введите адрес электронной почты</label>
-          <input class="knitwork-entry__input" id="enty-mail" name="mail" type="email" placeholder="Ваш Email*" required>
+          <input class="knitwork-entry__input" id="enty-mail" name="mail" type="email" placeholder="Ваш Email*"
+            required>
           <svg class="knitwork-entry__icon" width="32" height="32">
             <use xlink:href="img/sprite.svg#icon-mail"></use>
           </svg>
+        </div>
+      </div>
+
+      <div class="knitwork__field knitwork__fieldset--comment">
+        <h3 class="knitwork__legend">Доп</h3>
+        <div class="knitwork__block knitwork-comment">
+          <label class="knitwork-comment__label visually-hidden" for="comment-text">Напишите дополнительные пожелания</label>
+          <textarea class="knitwork-comment__textarea" id="comment-text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
       </div>
 
