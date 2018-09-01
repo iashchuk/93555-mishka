@@ -1,0 +1,40 @@
+.knitwork {
+  padding: 23px 30px 29px 30px;
+}
+
+.knitwork__description {
+  margin: 0 auto;
+  margin-bottom: 24px;
+  padding: 0;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 13px;
+  color: #444444;
+}
+
+.knitwork__legend {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 23px;
+  line-height: 17px;
+  font-size: 17px;
+  vertical-align: middle;
+  color: #63d1bb;
+  background-color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    z-index: -1;
+    display: inline-block;
+    width: 768px;
+    height: 1px;
+    margin-right: -768px;
+    margin-left: 25px;
+    vertical-align: middle;
+    background-color: #63d1bb;
+  }
+}
