@@ -1,0 +1,43 @@
+.knitwork-entry {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  list-style: none;
+}
+
+.knitwork-entry__label {
+  display: block;
+  margin-bottom: 13px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+
+.knitwork-entry__input {
+  width: 100%;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  font-family: inherit;
+  color: #444444;
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
