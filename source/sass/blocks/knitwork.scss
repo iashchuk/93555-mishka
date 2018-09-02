@@ -66,6 +66,19 @@
   }
 }
 
+.knitwork__field--color {
+  @include tablet {
+    position: relative;
+    margin-left: -50px;
+    margin-right: -50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 64px;
+    padding-bottom: 11px;
+    background-color: #f1f1f1;
+  }
+}
+
 .knitwork__field--button {
   @include tablet {
     flex-direction: row-reverse;
