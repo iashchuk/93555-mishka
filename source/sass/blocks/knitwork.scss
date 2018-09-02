@@ -1,5 +1,9 @@
 .knitwork {
   padding: 23px 30px 29px 30px;
+
+  @include tablet {
+    padding: 0 50px;
+  }
 }
 
 .knitwork__description {
@@ -10,6 +14,13 @@
   line-height: 24px;
   font-size: 13px;
   color: #444444;
+
+  @include tablet {
+    margin: 0 auto;
+    margin-bottom: 73px;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .knitwork__legend {
@@ -26,6 +37,11 @@
   text-transform: uppercase;
   overflow: hidden;
 
+  @include tablet {
+    align-self: flex-start;
+    width: 167px;
+  }
+
   &::after {
     content: "";
     z-index: -1;
@@ -36,6 +52,17 @@
     margin-left: 25px;
     vertical-align: middle;
     background-color: #63d1bb;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.knitwork__field {
+  @include tablet {
+    display: flex;
+    width: 768px;
   }
 }
 
