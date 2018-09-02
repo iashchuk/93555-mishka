@@ -3,10 +3,18 @@
   padding: 0;
   padding-bottom: 25px;
   list-style: none;
+
+  @include tablet {
+    flex-grow: 1;
+  }
 }
 
 .knitwork-radio__item {
   margin-bottom: 15px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .knitwork-radio__label {
@@ -19,6 +27,12 @@
   font-size: 17px;
   line-height: 18px;
 
+  @include tablet {
+    padding-top: 0;
+    font-size: 19px;
+    padding-left: 80px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -28,6 +42,12 @@
     height: 38px;
     border: 2px solid #444444;
     border-radius: 50%;
+
+    @include tablet {
+      top: -14px;
+      width: 51px;
+      height: 51px;
+    }
   }
 
   &::after {
@@ -40,6 +60,13 @@
     height: 15px;
     background-color: #62d1ba;
     border-radius: 50%;
+
+    @include tablet {
+      top: 1px;
+      left: 16px;
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &:hover::before {

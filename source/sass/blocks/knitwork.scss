@@ -40,6 +40,7 @@
   @include tablet {
     align-self: flex-start;
     width: 167px;
+    background-color: transparent;
   }
 
   &::after {
@@ -62,7 +63,14 @@
 .knitwork__field {
   @include tablet {
     display: flex;
-    width: 768px;
+  }
+}
+
+.knitwork__field--button {
+  @include tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -74,6 +82,14 @@
   font-size: 14px;
   line-height: 16px;
   color: #444;
+
+  @include tablet {
+    max-width: 350px;
+    margin: 0;
+    padding-bottom: 7px;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .knitwork__button {
@@ -82,4 +98,10 @@
   font-weight: 700;
   line-height: 16px;
   font-size: 17px;
+
+  @include tablet {
+    width: 230px;
+    margin: 0;
+    padding: 16px 10px 16px 6px;
+  }
 }
