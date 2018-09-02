@@ -5,6 +5,12 @@
   list-style: none;
 }
 
+.knitwork-entry--phone,
+.knitwork-entry--mail {
+  position: relative;
+  padding-bottom: 10px;
+}
+
 .knitwork-entry__label {
   display: block;
   margin-bottom: 13px;
@@ -40,4 +46,22 @@
   &:focus::placeholder {
     color: transparent;
   }
+}
+
+
+.knitwork-entry__input--phone,
+.knitwork-entry__input--mail {
+  padding: 9px 44px 16px 0;
+
+  &:hover + .knitwork-entry__icon,
+  &:focus + .knitwork-entry__icon {
+    fill: #62d1ba;
+  }
+}
+
+.knitwork-entry__icon {
+  position: absolute;
+  top: 5px;
+  right: 9px;
+  fill: rgba(0, 0, 0, 0.2);
 }
