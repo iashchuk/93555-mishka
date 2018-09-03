@@ -11,24 +11,39 @@
     justify-content: space-between;
     width: 501px;
   }
+
+  @include desktop {
+    width: 800px;
+  }
 }
 
 .knitwork-checkbox__item {
+  margin-bottom: 33px;
+
   @include tablet {
     width: 239px;
     margin-bottom: 58px;
     padding-top: 0;
     font-size: 19px;
   }
+
+  @include desktop {
+    width: 175px;
+    margin-right: 87px;
+  }
 }
 
 .knitwork-checkbox__label {
   position: relative;
   display: block;
-  padding-left: 80px;
+  padding-left: 60px;
   font-weight: 700;
   font-size: 17px;
-  line-height: 18px;
+  line-height: 38px;
+
+  @include tablet {
+    font-size: 19px;
+  }
 
   &::before {
     content: "";
