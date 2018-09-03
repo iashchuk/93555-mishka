@@ -3,6 +3,15 @@
   padding: 0;
   padding-bottom: 5px;
   list-style: none;
+
+  @include tablet {
+    width: 501px;
+    position: relative;
+  }
+
+   @include desktop {
+     width: 700px;
+   }
 }
 
 .knitwork-entry--phone,
@@ -11,18 +20,34 @@
   padding-bottom: 10px;
 }
 
+.knitwork-entry__item {
+  margin-bottom: 22px;
+  @include tablet {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 32px;
+  }
+}
+
 .knitwork-entry__label {
   display: block;
   margin-bottom: 13px;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
-}
 
+  @include tablet {
+    display: inline-block;
+    margin: 0;
+    margin-top: -4px;
+    margin-right: 20px;
+    vertical-align: middle;
+    font-size: 19px;
+  }
+}
 
 .knitwork-entry__input {
   width: 100%;
-  margin-bottom: 22px;
   padding-bottom: 16px;
   font-weight: 400;
   font-size: 17px;
@@ -31,6 +56,14 @@
   color: #444444;
   border: none;
   border-bottom: 2px solid #000000;
+  background-color: transparent;
+
+  @include tablet {
+    margin-top: 1px;
+    padding: 4px 5px 11px 18px;
+    font-size: 19px;
+    line-height: 19px;
+  }
 
   &:hover,
   &:focus {
@@ -47,7 +80,6 @@
     color: transparent;
   }
 }
-
 
 .knitwork-entry__input--phone,
 .knitwork-entry__input--mail {
