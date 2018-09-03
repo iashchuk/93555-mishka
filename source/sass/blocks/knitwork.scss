@@ -1,15 +1,14 @@
-.knitwork {
-  padding: 23px 30px 29px 30px;
-
+.knitwork__wrapper {
   @include tablet {
-    padding: 0 50px;
+    background-color: #f1f1f1;
   }
 }
 
 .knitwork__description {
   margin: 0 auto;
   margin-bottom: 24px;
-  padding: 0;
+  padding: 0 30px;
+  padding-top: 23px;
   font-weight: 400;
   line-height: 24px;
   font-size: 13px;
@@ -18,8 +17,13 @@
   @include tablet {
     margin: 0 auto;
     margin-bottom: 73px;
+    padding: 0 50px;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @include desktop {
+    width: 700px;
   }
 }
 
@@ -43,6 +47,12 @@
     background-color: transparent;
   }
 
+  @include desktop {
+    width: 166px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
   &::after {
     content: "";
     z-index: -1;
@@ -60,30 +70,68 @@
   }
 }
 
+.knitwork__legend--phone,
+.knitwork__legend--mail {
+  @include tablet {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 .knitwork__field {
+  padding: 0 30px;
+
   @include tablet {
     display: flex;
+    padding: 0 50px;
+    padding-top: 56px;
+    padding-bottom: 13px;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    width: 1150px;
   }
 }
 
 .knitwork__field--color {
   @include tablet {
     position: relative;
-    margin-left: -50px;
-    margin-right: -50px;
-    padding-left: 50px;
-    padding-right: 50px;
     padding-top: 64px;
     padding-bottom: 11px;
     background-color: #f1f1f1;
   }
 }
 
+.knitwork__field--phone,
+.knitwork__field--mail {
+  @include tablet {
+    align-items: baseline;
+    padding-top: 50px;
+    background-color: #f1f1f1;
+  }
+}
+
+.knitwork__field--mail {
+  @include tablet {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+}
+
 .knitwork__field--button {
+  margin-bottom: 30px;
+
   @include tablet {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
+
+    @include desktop {
+      width: 800px;
+    }
   }
 }
 
