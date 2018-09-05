@@ -93,6 +93,11 @@
     padding-left: 17px;
   }
 
+  @include desktop {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
   &:hover + .knitwork-entry__icon,
   &:focus + .knitwork-entry__icon {
     fill: #62d1ba;
@@ -108,5 +113,10 @@
   @include tablet {
     top: 12px;
     right: 22px;
+  }
+
+  @include desktop {
+    top: 14px;
+    right: 5px;
   }
 }

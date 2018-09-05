@@ -110,9 +110,13 @@
   }
 }
 
-.page__title--inner {
+.page__title--form {
   @include tablet {
     margin-bottom: 62px;
+  }
+
+  @include desktop {
+    margin-bottom: 108px;
   }
 
 }

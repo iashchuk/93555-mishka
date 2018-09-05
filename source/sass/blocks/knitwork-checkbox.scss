@@ -8,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 501px;
   }
 
@@ -28,8 +28,8 @@
   }
 
   @include desktop {
-    width: 175px;
-    margin-right: 87px;
+    width: 250px;
+    margin-right: 12px;
   }
 }
 
