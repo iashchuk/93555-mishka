@@ -85,19 +85,29 @@
   padding-top: 70px;
   padding-left: 7px;
 
-   @include tablet {
+  @include tablet {
     margin-bottom: 69px;
     padding-top: 27px;
     padding-left: 9px;
 
-     &::after {
-     bottom: -69px;
-     height: 23px;
-     background-size: contain;
+    &::after {
+      bottom: -69px;
+      height: 23px;
+      background-size: contain;
+    }
 
-     }
-   }
+    @include desktop {
+      margin-bottom: 115px;
+      padding-top: 25px;
 
+      &::after {
+        bottom: -85px;
+        height: 37px;
+        background-size: contain;
+        background-position-x: -3px;
+      }
+    }
+  }
 }
 
 .page__header {
@@ -130,6 +140,6 @@
   }
 }
 
- .page__contacts {
-   margin: 0 auto;
- }
+.page__contacts {
+  margin: 0 auto;
+}
