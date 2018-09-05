@@ -110,6 +110,14 @@
   }
 }
 
+.page__title--inner {
+  @include tablet {
+    margin-bottom: 62px;
+  }
+
+}
+
+
 .page__header {
   @include tablet {
     position: relative;

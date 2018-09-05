@@ -8,12 +8,10 @@
     width: 501px;
   }
 
-   @include desktop {
-     width: 700px;
-   }
-
+  @include desktop {
+    width: 700px;
+  }
 }
-
 
 .knitwork-comment__textarea {
   width: 100%;
@@ -27,6 +25,10 @@
   border: 2px solid #000000;
   resize: none;
 
+  @include tablet {
+    padding-left: 15px;
+  }
+
   &:hover,
   &:focus {
     border: 2px solid #62d1ba;
@@ -36,6 +38,11 @@
   &::placeholder {
     font-weight: 400;
     color: rgba(68, 68, 68, 0.3);
+
+    @include tablet {
+      font-size: 19px;
+      line-height: 18px;
+    }
   }
 
   &:focus::placeholder {

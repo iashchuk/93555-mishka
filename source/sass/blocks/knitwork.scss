@@ -16,7 +16,7 @@
 
   @include tablet {
     margin: 0 auto;
-    margin-bottom: 73px;
+    margin-bottom: 15px;
     padding: 0 50px;
     font-size: 17px;
     line-height: 30px;
@@ -44,6 +44,7 @@
   @include tablet {
     align-self: flex-start;
     width: 167px;
+    padding-top: 3px;
     background-color: transparent;
   }
 
@@ -73,10 +74,24 @@
 .knitwork__legend--color,
 .knitwork__legend--name {
   margin-bottom: 29px;
+
+  @include tablet {
+    padding-top: 0;
+  }
+}
+
+.knitwork__legend--name {
+  @include tablet {
+    padding-top: 10px;
+  }
 }
 
 .knitwork__legend--comment {
   margin-bottom: 7px;
+
+   @include tablet {
+     padding-top: 16px;
+   }
 }
 
 
@@ -85,7 +100,7 @@
   margin-bottom: 15px;
 
   @include tablet {
-    margin-top: 15px;
+    margin-top: 14px;
     margin-bottom: 15px;
   }
 }
@@ -110,8 +125,8 @@
 .knitwork__field--color {
   @include tablet {
     position: relative;
-    padding-top: 64px;
-    padding-bottom: 11px;
+    padding-top: 44px;
+    padding-bottom: 5px;
     background-color: #f1f1f1;
   }
 }
@@ -120,7 +135,7 @@
 .knitwork__field--mail {
   @include tablet {
     align-items: baseline;
-    padding-top: 50px;
+    padding-top: 43px;
     background-color: #f1f1f1;
   }
 }
@@ -132,6 +147,13 @@
   }
 }
 
+.knitwork__field--comment {
+  @include tablet {
+    padding-top: 49px;
+  }
+}
+
+
 .knitwork__field--button {
   margin-bottom: 30px;
 
@@ -139,7 +161,8 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    padding-top: 37px;
 
     @include desktop {
       width: 800px;
@@ -174,7 +197,7 @@
 
   @include tablet {
     width: 230px;
-    margin: 0;
-    padding: 16px 10px 16px 6px;
+    margin-bottom: 0;
+    padding: 14px 10px 14px 6px;
   }
 }

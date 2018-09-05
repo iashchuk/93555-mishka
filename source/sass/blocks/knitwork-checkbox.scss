@@ -43,6 +43,8 @@
   line-height: 18px;
 
   @include tablet {
+    padding-top: 0;
+    padding-left: 81px;
     font-size: 19px;
   }
 
