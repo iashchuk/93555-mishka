@@ -6,7 +6,7 @@
 
 .knitwork__description {
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   padding: 0 30px;
   padding-top: 23px;
   font-weight: 400;
@@ -32,7 +32,7 @@
   display: inline-block;
   width: 100%;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   line-height: 17px;
   font-size: 17px;
   vertical-align: middle;
@@ -60,7 +60,7 @@
     width: 768px;
     height: 1px;
     margin-right: -768px;
-    margin-left: 25px;
+    margin-left: 20px;
     vertical-align: middle;
     background-color: #63d1bb;
 
@@ -70,8 +70,20 @@
   }
 }
 
+.knitwork__legend--color,
+.knitwork__legend--name {
+  margin-bottom: 29px;
+}
+
+.knitwork__legend--comment {
+  margin-bottom: 7px;
+}
+
+
 .knitwork__legend--phone,
 .knitwork__legend--mail {
+  margin-bottom: 15px;
+
   @include tablet {
     margin-top: 15px;
     margin-bottom: 15px;

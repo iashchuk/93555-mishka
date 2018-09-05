@@ -7,6 +7,42 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Мишка - Форма</title>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
+      <!-- Pixel Glass -->
+      <style>
+        HTML {
+          background-repeat: no-repeat;
+          background-position: 50% 0;
+          /* По умолчанию мобильный макет */
+          background-image: url("img/pixel_glass/mishka-form-mobile.jpg");
+        }
+
+        /* Планшет */
+
+        @media ( min-width: 768px) {
+          HTML {
+            /* Планшетный макет */
+            background-image: url("img/pixel_glass/mishka-form-tablet.jpg");
+          }
+        }
+
+        /* Десктоп */
+
+        @media ( min-width: 1150px) {
+          HTML {
+            /* Десктопный макет */
+            background-image: url("img/pixel_glass/mishka-form-desktop.jpg");
+
+          }
+        }
+
+        BODY {
+          opacity: .5;
+        }
+      </style>
+
+      <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+      <script src="../node_modules/pixel-glass/script.js"></script>
+      <!-- // Pixel Glass -->
 </head>
 
 <body class="page">
@@ -62,7 +98,7 @@
   </header>
 
   <main class="page__main">
-    <h1 class="page__title">Вязание на заказ</h1>
+    <h1 class="page__title page__title--inner">Вязание на заказ</h1>
     <form class="page__knitwork knitwork" method="post" action="https://echo.htmlacademy.ru">
       <h2 class="visually-hidden">Форма заказа</h2>
       <p class="knitwork__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
@@ -120,7 +156,7 @@
       </div>
 
       <div class="knitwork__field knitwork__field--name">
-        <h3 class="knitwork__legend">ФИО</h3>
+        <h3 class="knitwork__legend knitwork__legend--name">ФИО</h3>
         <ul class="knitwork__block knitwork-entry">
           <li class="knitwork-entry__item">
             <label class="knitwork-entry__label" for="entry-name">Имя:</label>
@@ -166,7 +202,7 @@
       </div>
 
       <div class="knitwork__field knitwork__field--comment">
-        <h3 class="knitwork__legend">Доп</h3>
+        <h3 class="knitwork__legend knitwork__legend--comment">Доп</h3>
         <div class="knitwork__block knitwork-comment">
           <label class="knitwork-comment__label visually-hidden" for="comment-text">Напишите дополнительные пожелания</label>
           <textarea class="knitwork-comment__textarea" id="comment-text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>

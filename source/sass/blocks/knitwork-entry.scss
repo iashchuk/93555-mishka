@@ -1,7 +1,7 @@
 .knitwork-entry {
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
+  padding-bottom: 9px;
   list-style: none;
 
   @include tablet {
@@ -17,7 +17,7 @@
 .knitwork-entry--phone,
 .knitwork-entry--mail {
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .knitwork-entry__item {
@@ -31,7 +31,7 @@
 
 .knitwork-entry__label {
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -93,7 +93,7 @@
 
 .knitwork-entry__icon {
   position: absolute;
-  top: 5px;
-  right: 9px;
+  top: 4px;
+  right: 5px;
   fill: rgba(0, 0, 0, 0.2);
 }
