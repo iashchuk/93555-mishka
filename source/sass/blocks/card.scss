@@ -67,7 +67,7 @@
     flex-direction: column;
     width: 334px;
     min-height: 333px;
-    padding-top: 24px;
+    padding-top: 25px;
     padding-bottom: 28px;
   }
 
@@ -89,6 +89,7 @@
   color: #444444;
 
   @include tablet {
+    margin-top: 6px;
     font-size: 15px;
   }
 
@@ -109,7 +110,7 @@
   @include tablet {
     flex-direction: row;
     margin-top: auto;
-    padding: 21px 3px 0 5px;
+    padding: 25px 3px 0 5px;
   }
 
   @include desktop {

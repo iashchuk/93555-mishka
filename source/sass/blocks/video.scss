@@ -37,8 +37,9 @@
   @include tablet {
     width: auto;
     order: 1;
+    margin: 0;
     margin-bottom: 33px;
-    padding-left: 107px;
+    padding-left: 105px;
 
     font-size: 20px;
   }
@@ -144,8 +145,10 @@
 
   @include tablet {
     order: 3;
+    margin: 0 auto;
     width: 584px;
   }
+
   @include desktop {
     width: 230px;
     margin: 0;

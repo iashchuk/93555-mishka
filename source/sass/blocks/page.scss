@@ -85,6 +85,19 @@
   padding-top: 70px;
   padding-left: 7px;
 
+   @include tablet {
+    margin-bottom: 69px;
+    padding-top: 27px;
+    padding-left: 9px;
+
+     &::after {
+     bottom: -69px;
+     height: 23px;
+     background-size: contain;
+
+     }
+   }
+
 }
 
 .page__header {
