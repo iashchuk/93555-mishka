@@ -47,6 +47,7 @@
   margin: 0;
   padding: 0;
   font-size: 17px;
+  line-height: 24px;
 
   @include tablet {
     width: 240px;
@@ -57,7 +58,7 @@
 .card__wrapper {
   position: relative;
   width: 100%;
-  padding: 26px 27px 0;
+  padding: 24px 27px 0 27px;
   border: 1px solid #ececec;
   overflow: hidden;
 
@@ -80,7 +81,7 @@
 
 .card__description {
   width: 100%;
-  margin-top: 6px;
+  margin-top: 5px;
   margin-bottom: 19px;
   font-weight: 400;
   font-size: 13px;
@@ -100,8 +101,9 @@
 .card__order {
   display: flex;
   justify-content: space-between;
-  padding-top: 21px;
-  padding-bottom: 27px;
+  align-items: flex-start;
+  padding-top: 23px;
+  padding-bottom: 30px;
   border-top: 1px solid #ececec;
 
   @include tablet {
@@ -121,6 +123,7 @@
   margin: 0;
   padding-right: 30px;
   font-size: 15px;
+  line-height: 19px;
   font-weight: 700;
 
   @include tablet {

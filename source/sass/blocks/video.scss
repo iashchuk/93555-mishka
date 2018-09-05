@@ -4,8 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-bottom: 58px;
-  padding: 22px 0 32px;
+  margin-bottom: 60px;
+  padding: 22px 0 32px 0;
 
   border: 1px solid #ececec;
 
@@ -31,8 +31,8 @@
   margin: 0 auto;
   margin-bottom: 25px;
   padding-left: 90px;
-
   font-size: 17px;
+  line-height: 24px;
 
   @include tablet {
     width: auto;

@@ -1,6 +1,6 @@
 .product {
   padding: 0;
-  padding-top: 30px;
+  padding-top: 17px;
   margin-bottom: 32px;
 
   @include tablet {
@@ -21,7 +21,7 @@
 }
 
 .product__item {
-  margin-bottom: 29px;
+  margin-bottom: 32px;
 
   &:last-child {
     margin-bottom: 0;

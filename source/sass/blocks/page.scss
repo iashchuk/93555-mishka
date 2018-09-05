@@ -81,6 +81,12 @@
   }
 }
 
+.page__title--catalog {
+  padding-top: 70px;
+  padding-left: 7px;
+
+}
+
 .page__header {
   @include tablet {
     position: relative;
