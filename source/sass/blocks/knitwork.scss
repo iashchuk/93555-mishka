@@ -10,8 +10,8 @@
   padding: 0 30px;
   padding-top: 23px;
   font-weight: 400;
-  line-height: 24px;
   font-size: 13px;
+  line-height: 24px;
   color: #444444;
 
   @include tablet {
@@ -34,13 +34,13 @@
   width: 100%;
   margin: 0;
   margin-bottom: 24px;
-  line-height: 17px;
+  overflow: hidden;
   font-size: 17px;
+  line-height: 17px;
   vertical-align: middle;
   color: #63d1bb;
-  background-color: #fff;
   text-transform: uppercase;
-  overflow: hidden;
+  background-color: #ffffff;
 
   @include tablet {
     align-self: flex-start;
@@ -115,11 +115,11 @@
 
   @include tablet {
     display: flex;
+    width: 768px;
+    margin: 0 auto;
     padding: 0 50px;
     padding-top: 56px;
     padding-bottom: 13px;
-    width: 768px;
-    margin: 0 auto;
   }
 
   @include desktop {
@@ -186,7 +186,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: #444;
+  color: #444444;
 
   @include tablet {
     max-width: 350px;
@@ -201,8 +201,8 @@
   width: 100%;
   margin-bottom: 57px;
   font-weight: 700;
-  line-height: 20px;
   font-size: 17px;
+  line-height: 20px;
 
   @include tablet {
     width: 230px;

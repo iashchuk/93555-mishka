@@ -4,6 +4,15 @@
   max-width: 260px;
   padding: 0;
 
+  @include tablet {
+    max-width: none;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    width: 315px;
+  }
+
   &:hover,
   &:focus {
     .card__wrapper {
@@ -11,24 +20,16 @@
     }
   }
 
-    &:active {
-      .card__wrapper {
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-      }
+  &:active {
+    .card__wrapper {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     }
-
-  @include tablet {
-    max-width: none;
-  }
-
-  @include desktop {
-    width: 315px;
-    flex-direction: column;
   }
 }
 
 .card__link {
   display: block;
+
   color: #000000;
 
   &:hover,
@@ -60,21 +61,25 @@
   width: 100%;
   margin: 0;
   padding: 0;
+
   font-size: 17px;
   line-height: 24px;
 
   @include tablet {
     width: 240px;
+
     font-size: 20px;
   }
 }
 
 .card__wrapper {
   position: relative;
+
   width: 100%;
   padding: 24px 27px 0 27px;
-  border: 1px solid #ececec;
   overflow: hidden;
+
+  border: 1px solid #ececec;
 
   @include tablet {
     display: flex;
@@ -97,6 +102,7 @@
   width: 100%;
   margin-top: 5px;
   margin-bottom: 19px;
+
   font-weight: 400;
   font-size: 13px;
   line-height: 30px;
@@ -104,6 +110,7 @@
 
   @include tablet {
     margin-top: 6px;
+
     font-size: 15px;
   }
 
@@ -119,6 +126,7 @@
   align-items: flex-start;
   padding-top: 23px;
   padding-bottom: 30px;
+
   border-top: 1px solid #ececec;
 
   @include tablet {
@@ -128,8 +136,8 @@
   }
 
   @include desktop {
-    padding-left: 0;
     padding-right: 3px;
+    padding-left: 0;
   }
 }
 
@@ -137,13 +145,15 @@
   width: 170px;
   margin: 0;
   padding-right: 30px;
+
+  font-weight: 700;
   font-size: 15px;
   line-height: 19px;
-  font-weight: 700;
 
   @include tablet {
     width: 100px;
     padding-right: 0;
+
     font-size: 17px;
   }
 }
@@ -153,8 +163,10 @@
   width: 21px;
   height: 19px;
   padding: 0;
+
   background-color: transparent;
   border: none;
+
   fill: rgba(35, 31, 32, 0.2);
 
   &:hover,

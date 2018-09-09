@@ -13,23 +13,23 @@
   @include desktop {
     position: relative;
     width: 100%;
-    padding-left: 175px;
     padding-top: 71px;
     padding-bottom: 154px;
+    padding-left: 175px;
     overflow: hidden;
   }
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: contain;
     background-repeat: repeat;
+    background-size: contain;
 
     @include tablet {
       bottom: 0;
@@ -37,10 +37,9 @@
     }
 
     @include desktop {
-     left: -22px;
-     width: 1072px;
-     height: 21px;
-
+      left: -22px;
+      width: 1072px;
+      height: 21px;
     }
   }
 
@@ -72,8 +71,8 @@
   margin: 0;
   margin-bottom: 24px;
   padding: 0;
-  font-size: 25px;
   font-weight: 700;
+  font-size: 25px;
   line-height: 30px;
 
   @include tablet {
@@ -193,6 +192,7 @@
   &:focus {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -220,9 +220,9 @@
     font-size: 17px;
   }
 
-    @include tablet {
-      width: 175px;
-    }
+  @include tablet {
+    width: 175px;
+  }
 
   @include desktop {
     margin-top: 8px;

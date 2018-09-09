@@ -1,11 +1,11 @@
 .product {
+  margin-bottom: 32px;
   padding: 0;
   padding-top: 17px;
-  margin-bottom: 32px;
 
   @include tablet {
-    padding: 0;
     margin-bottom: 52px;
+    padding: 0;
   }
 
   @include desktop {
@@ -17,24 +17,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-   padding: 0;
+  padding: 0;
   list-style: none;
 }
 
 .product__item {
   margin-bottom: 32px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   @include mobile-wide {
     margin-left: 20px;
   }
 
   @include tablet {
-    margin-left: 0;
     margin-bottom: 54px;
+    margin-left: 0;
   }
 
   @include desktop {
@@ -48,5 +44,9 @@
     &:nth-child(3n) {
       margin-right: 0;
     }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

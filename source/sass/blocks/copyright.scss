@@ -5,8 +5,8 @@
   align-items: center;
   margin: 0;
   padding: 16px 10px 25px;
-  font-size: 19px;
   font-weight: 700;
+  font-size: 19px;
   line-height: 19px;
 
   @include tablet {
@@ -28,11 +28,13 @@
       fill: #46c1ae;
     }
   }
+
   &:active {
     .copyright__icon {
       fill: rgba(70, 193, 174, 0.3);
     }
   }
+
   &:active + .copyright__text {
     color: rgba(0, 0, 0, 0.3);
   }

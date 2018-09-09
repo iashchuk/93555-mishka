@@ -60,8 +60,8 @@
   margin: 0;
   margin-bottom: 26px;
   padding: 0;
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 30px;
 
   @include tablet {
@@ -93,10 +93,10 @@
 }
 
 .contacts__item {
+  display: flex;
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
-  display: flex;
 
   @include tablet {
     width: 334px;
@@ -110,9 +110,9 @@
 }
 
 .contacts__value {
+  width: 180px;
   margin: 0;
   padding: 0;
-  width: 180px;
 
   @include tablet {
     width: 258px;
@@ -121,6 +121,7 @@
 
 .contacts__value--adress {
   width: 145px;
+
   @include tablet {
     width: 258px;
   }
@@ -130,11 +131,13 @@
   padding-bottom: 3px;
   color: #444444;
   border-bottom: 1px solid #62d1ba;
+
   &:hover,
   &:focus {
     color: #46c1ae;
     border-bottom: 1px solid #46c1ae;
   }
+
   &:active {
     color: rgba(70, 193, 174, 0.3);
     border-bottom: 1px solid rgba(70, 193, 174, 0.1);
@@ -195,8 +198,8 @@
   }
 
   @include desktop {
-    width: 525px;
     left: 0;
+    width: 525px;
     transform: translate(0);
   }
 }

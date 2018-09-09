@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+
   font-family: $open-sans;
   color: #000000;
 }
@@ -16,6 +17,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
+
   font-weight: 400;
   font-size: 16px;
   font-family: inherit;

@@ -1,7 +1,7 @@
 .menu {
+  width: 100%;
   padding: 0;
   list-style: none;
-  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -51,8 +51,8 @@
 .menu__item--site {
   @include tablet {
     width: 167px;
-    border: none;
     background-color: #f9f9f9;
+    border: none;
   }
 
   @include desktop {
@@ -72,8 +72,8 @@
   @include tablet {
     width: 314px;
     padding-right: 50px;
-    border-left: 1px solid rgba(68, 68, 68, 0.1);
     border-bottom: 1px solid rgba(68, 68, 68, 0.1);
+    border-left: 1px solid rgba(68, 68, 68, 0.1);
   }
 }
 
@@ -118,8 +118,8 @@
     color: rgba(0, 0, 0, 0.6);
 
     .menu__icon {
-      fill: #63d1bb;
       opacity: 1;
+      fill: #63d1bb;
     }
   }
 

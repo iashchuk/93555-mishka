@@ -1,8 +1,8 @@
 .navigation {
   position: relative;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 
   @include tablet {
     max-width: 800px;
@@ -10,7 +10,7 @@
   }
 
   @include desktop {
-    max-width: 1150px;;
+    max-width: 1150px;
   }
 }
 
@@ -41,9 +41,6 @@
   @include tablet {
     display: none;
   }
-
-  @include desktop {
-  }
 }
 
 .navigation__toggle--off {
@@ -70,6 +67,7 @@
 
 .navigation__user {
   margin: 0;
+
   @include tablet {
     display: block;
     margin-right: -50px;
@@ -100,8 +98,8 @@
 
   @include tablet {
     position: relative;
-    order: 2;
     display: block;
+    order: 2;
     width: 320px;
     margin: 0;
     margin-left: auto;

@@ -118,9 +118,7 @@
   @include desktop {
     margin-bottom: 108px;
   }
-
 }
-
 
 .page__header {
   @include tablet {
@@ -147,6 +145,7 @@
   @include tablet {
     margin-bottom: 24px;
   }
+
   @include desktop {
     margin-bottom: 100px;
   }

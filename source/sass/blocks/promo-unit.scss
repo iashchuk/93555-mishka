@@ -1,7 +1,7 @@
 .promo-unit {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 
   @include tablet {
     width: 334px;
@@ -23,8 +23,8 @@
 .promo-unit__icon {
   position: absolute;
   top: 50%;
-  fill: rgba(20, 144, 128, 0.5);
   transform: translateY(-50%);
+  fill: rgba(20, 144, 128, 0.5);
 }
 
 .promo-unit__icon--interior {
@@ -49,8 +49,8 @@
   display: block;
   width: 100%;
   padding: 31px 95px 30px 29px;
-  font-size: 19px;
   font-weight: 700;
+  font-size: 19px;
   color: #ffffff;
 
   @include mobile-wide {
@@ -63,6 +63,10 @@
     margin: 0;
   }
 
+  @include tablet {
+    padding: 27px 36px 36px;
+  }
+
   &:hover,
   &:focus {
     top: -5px;
@@ -70,8 +74,8 @@
     padding-bottom: 40px;
 
     .promo-unit__icon {
-      fill: rgba(20, 144, 128, 0.7);
       top: calc(50% - 5px);
+      fill: rgba(20, 144, 128, 0.7);
     }
   }
 
@@ -81,10 +85,6 @@
     .promo-unit__icon {
       fill: rgba(20, 144, 128, 0.3);
     }
-  }
-
-  @include tablet {
-    padding: 27px 36px 36px;
   }
 }
 

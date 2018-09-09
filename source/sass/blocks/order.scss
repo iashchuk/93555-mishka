@@ -11,10 +11,8 @@
   top: 0;
   left: 0;
   z-index: 1;
-
   width: 100%;
   height: 100%;
-
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -23,13 +21,11 @@
   top: 50%;
   left: 50%;
   z-index: 2;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 320px;
   padding: 30px 30px 47px 30px;
-
   background-color: #ffffff;
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
@@ -44,12 +40,11 @@
   width: 148px;
   margin: 0;
   margin-bottom: 12px;
-
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 30px;
 
   @include tablet {
     width: 355px;
@@ -63,12 +58,11 @@
   width: 260px;
   margin-bottom: 28px;
   padding: 0;
-
   border: none;
 
-   @include tablet {
-     width: 355px;
-   }
+  @include tablet {
+    width: 355px;
+  }
 }
 
 .order__button {
@@ -89,7 +83,6 @@
 .order__legend {
   width: 100%;
   margin-bottom: 22px;
-
   font-weight: 400;
   font-size: 15px;
   line-height: 30px;
@@ -106,12 +99,10 @@
   margin-right: 7px;
   margin-bottom: 5px;
   padding: 16px 5px;
-
   line-height: 16px;
   text-align: center;
   color: #444444;
   text-transform: uppercase;
-
   border: 2px solid rgba(68, 68, 68, 0.1);
 
   @include tablet {
