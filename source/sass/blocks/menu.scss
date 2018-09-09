@@ -36,6 +36,7 @@
 
 .menu--special {
   display: none;
+
   @include desktop {
     display: flex;
     width: 700px;
@@ -77,7 +78,6 @@
 }
 
 .menu__item--catalog {
-
   @include desktop {
     width: 234px;
     padding-left: 50px;
@@ -115,11 +115,20 @@
 
   &:hover[href],
   &:focus[href] {
-    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.6);
+
+    .menu__icon {
+      fill: #63d1bb;
+      opacity: 1;
+    }
   }
 
   &:active[href] {
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
+
+    .menu__icon {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -130,6 +139,7 @@
     font-size: 15px;
     text-align: left;
   }
+
   @include desktop {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -138,15 +148,14 @@
   }
 }
 
-
 .menu__link--gray {
   @include tablet {
     background-color: #f1f1f1;
   }
 
-   @include desktop {
-     background-color: transparent;
-   }
+  @include desktop {
+    background-color: transparent;
+  }
 }
 
 .menu__link--user {

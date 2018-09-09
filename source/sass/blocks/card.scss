@@ -4,6 +4,19 @@
   max-width: 260px;
   padding: 0;
 
+  &:hover,
+  &:focus {
+    .card__wrapper {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+    &:active {
+      .card__wrapper {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
   @include tablet {
     max-width: none;
   }
@@ -22,6 +35,7 @@
   &:focus {
     color: rgba(0, 0, 0, 0.6);
   }
+
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
@@ -147,6 +161,7 @@
   &:focus {
     fill: #63d1bb;
   }
+
   &:active {
     fill: rgba(99, 209, 187, 0.3);
   }
