@@ -4,6 +4,7 @@
 
   var buttonOrder = document.querySelector(".hit__button");
   var order = document.querySelector(".order");
+  var page = document.querySelector(".order__overlay");
 
   buttonOrder.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -19,5 +20,15 @@
       }
     }
   });
+
+
+  document.addEventListener("click", function (evt) {
+    if (evt.target === page) {
+      if (order.classList.contains("order--show")) {
+        order.classList.remove("order--show");
+      }
+    }
+  });
+
 
 })();
