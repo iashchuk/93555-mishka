@@ -2,38 +2,41 @@
 
 (function () {
 
-  var buttonOrder = document.querySelector(".hit__button");
+  var orderButtons = document.querySelectorAll(".order-button");
   var order = document.querySelector(".order");
   var page = document.querySelector(".page");
   var overlay = document.querySelector(".order__overlay");
 
+  var onEscPressButton = function(evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      order.classList.remove("order--show");
+    }
+  };
 
-  var closeModal = function(evt) {
+  var closeModal = function (evt) {
     if (evt.target === overlay) {
       if (order.classList.contains("order--show")) {
         order.classList.remove("order--show");
         page.removeEventListener("click", closeModal);
         page.removeEventListener("touchstart", closeModal);
+        window.removeEventListener("keydown", onEscPressButton);
       }
     }
-  }
+  };
 
-  buttonOrder.addEventListener("click", function (evt) {
-    var target = evt.target;
-    var block = target.parentNode;
+  var onOrderButtonClick = function (evt) {
     evt.preventDefault();
     order.classList.add("order--show");
-
     page.addEventListener("click", closeModal);
     page.addEventListener("touchstart", closeModal);
+    window.addEventListener("keydown", onEscPressButton);
+
+  };
+
+  orderButtons.forEach(function (button) {
+    button.addEventListener('click', onOrderButtonClick);
   });
 
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      closeModal();
-    }
-  });
 
 })();
