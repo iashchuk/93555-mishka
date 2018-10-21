@@ -4,8 +4,6 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var uglify = require("gulp-uglify");
@@ -24,11 +22,13 @@ var paths = {
         root: "source",
         html: "source/**/*.html",
         sass: "source/sass/style.scss",
+        css: "source/css",
         sassWatch: "source/sass/**/*.{scss,sass}",
         js: "source/js/**/*.js",
         fonts: "source/fonts/**/*.{woff,woff2}",
-        imgWebp: "source/img/**",
-        imgOptim: "source/img/**/*.{jpg,png,svg}",
+        img: "source/img/**/*",
+        imgWebp: "source/img/**/*.{png,jpg}",
+        imgWebpFolder: "source/img/webpgit",
         spritePattern: "source/img/icon-*.svg",
         picturefill: "node_modules/picturefill/dist/picturefill.js",
         svg4everybody: "node_modules/svg4everybody/dist/svg4everybody.js"
@@ -49,26 +49,33 @@ gulp.task("clean:build", function() {
 });
 
 /*Копирование шрифтов и изображений*/
-gulp.task("copy:fonts", function() {
-    console.log("Копирование шрифтов в папку build...");
-    return gulp.src(paths.source.fonts).pipe(gulp.dest(paths.build.fonts));
+gulp.task("copy:data", function() {
+    console.log("Копирование данных в папку build...");
+   return gulp.src([
+     paths.source.html,
+     paths.source.fonts,
+     paths.source.img
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest(paths.build.root));
 });
 
 /*Копирование HTML-страниц*/
 gulp.task("copy:html", function() {
     console.log("Копирование HTML-страниц...");
     return gulp
-        .src("source/**/*.html")
-        // .pipe(posthtml([include()]))
-        .pipe(gulp.dest("build"));
+        .src(paths.source.html)
+        .pipe(gulp.dest(paths.build.root))
+        .pipe(server.stream());
 });
 
 /*Оптимизация изображений*/
-gulp.task("process:images", function() {
+gulp.task("optimization:images", function() {
     console.log("Оптимизация изображений...");
 
     return gulp
-        .src(paths.source.imgOptim)
+        .src(paths.source.img)
         .pipe(
             imagemin([
                 imagemin.optipng({ optimizationLevel: 3 }),
@@ -89,7 +96,6 @@ gulp.task("process:images", function() {
                 })
             ])
         )
-
         .pipe(gulp.dest(paths.build.img));
 });
 
@@ -100,7 +106,7 @@ gulp.task("create:webp", function() {
         .src(paths.source.imgWebp)
         .pipe(imagemin([webp({ quality: 90 })]))
         .pipe(rename({ extname: ".webp" }))
-        .pipe(gulp.dest(paths.build.img));
+        .pipe(gulp.dest(paths.source.imgWebpFolder));
 });
 
 /*Создаем SVG-спрайт*/
@@ -123,9 +129,11 @@ gulp.task("style:sass", function() {
         .pipe(sass())
         .pipe(postcss([autoprefixer()]))
         .pipe(gulp.dest(paths.build.css))
+        .pipe(gulp.dest(paths.source.css))
         .pipe(minify({ restructure: false }))
         .pipe(rename({ suffix: ".min" }))
         .pipe(gulp.dest(paths.build.css))
+        .pipe(gulp.dest(paths.source.css))
         .pipe(server.stream());
 });
 
@@ -159,20 +167,31 @@ gulp.task("serve", function() {
 
     gulp.watch(paths.source.sassWatch, ["style:sass"]);
     gulp.watch(paths.source.js, ["script:js"]);
-    gulp.watch(paths.source.html, ["copy:html", server.reload]);
+    gulp.watch(paths.source.html, ["copy:html"]);
+});
+
+/*Сборка проекта: dev*/
+gulp.task("dev", function (done) {
+  run(
+    "clean:build",
+    "copy:data",
+    "style:sass",
+    "script:js",
+    "create:svg-sprite",
+    done
+  );
 });
 
 /*Сборка проекта*/
 gulp.task("build", function(done) {
-    run(
-        "clean:build",
-        "copy:fonts",
-        "copy:html",
-        "style:sass",
-        "script:js",
-        "create:webp",
-        "process:images",
-        "create:svg-sprite",
-        done
-    );
+  run(
+    "clean:build",
+    "optimization:images",
+    "create:webp",
+    "copy:data",
+    "style:sass",
+    "script:js",
+    "create:svg-sprite",
+    done
+  );
 });

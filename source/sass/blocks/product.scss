@@ -33,6 +33,10 @@
     margin-left: 0;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include desktop {
     margin-right: 52px;
     margin-bottom: 10px;
@@ -44,9 +48,5 @@
     &:nth-child(3n) {
       margin-right: 0;
     }
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 }

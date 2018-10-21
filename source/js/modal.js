@@ -9,7 +9,6 @@
 
 
   var closeModal = function(evt) {
-    console.log(evt);
     if (evt.target === overlay) {
       if (order.classList.contains("order--show")) {
         order.classList.remove("order--show");
