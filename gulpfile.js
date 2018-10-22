@@ -15,8 +15,7 @@ var imagemin = require("gulp-imagemin");
 var jpegoptim = require("imagemin-jpegoptim");
 var webp = require("imagemin-webp");
 var svgstore = require("gulp-svgstore");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
+var inject = require("gulp-inject");
 
 var paths = {
   source: {
@@ -44,6 +43,10 @@ var paths = {
   }
 };
 
+function fileContents(filePath, file) {
+  return file.contents.toString();
+}
+
 /*Удаление*/
 gulp.task("clean:build", function () {
   console.log("Очистка папки build...");
@@ -65,11 +68,10 @@ gulp.task("copy:data", function () {
 /*Копирование HTML-страниц*/
 gulp.task("copy:html", function () {
   console.log("Копирование HTML-страниц...");
+  var sprite = gulp.src("build/img/sprite.svg");
   return gulp
     .src(paths.source.html)
-    .pipe(posthtml([
-      include()
-    ]))
+    .pipe(inject(sprite, {transform: fileContents}))
     .pipe(gulp.dest(paths.build.root))
 });
 
@@ -123,17 +125,25 @@ gulp.task("create:webp", function () {
     .pipe(gulp.dest(paths.source.imgWebpFolder));
 });
 
+
 /*Создаем SVG-спрайт*/
 gulp.task("create:svg-sprite", function () {
   console.log("Создание SVG спрайта...");
 
-  return gulp
+  var svgs = gulp
     .src(paths.source.spritePattern)
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest(paths.source.imgFolder));
+
+    return gulp
+      .src("build/*.html")
+      .pipe(inject(svgs, {
+        transform: fileContents
+      }))
+      .pipe(gulp.dest("build"));
 });
 
 /*Сборка и минификация стилей SASS*/

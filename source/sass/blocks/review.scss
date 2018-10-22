@@ -29,12 +29,14 @@
     width: 100%;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: repeat;
-    background-size: contain;
+    background-repeat: repeat-x;
+    background-size: auto 6px;
 
     @include tablet {
+      left: 0;
       bottom: 0;
-      height: 13px;
+      height: 17px;
+      background-size: auto 17px;
     }
 
     @include desktop {
