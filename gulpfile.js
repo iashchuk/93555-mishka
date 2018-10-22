@@ -39,7 +39,8 @@ var paths = {
     css: "build/css",
     js: "build/js",
     img: "build/img",
-    fonts: "build/fonts"
+    fonts: "build/fonts",
+    html: "build/*.html"
   }
 };
 
@@ -69,8 +70,11 @@ gulp.task("copy:data", function () {
 gulp.task("copy:html", function () {
   console.log("Копирование HTML-страниц...");
   var sprite = gulp.src("build/img/sprite.svg");
-  return gulp
-    .src(paths.source.html)
+  return gulp.src([
+    "source/*.html"
+  ], {
+    base: "source"
+  })
     .pipe(inject(sprite, {transform: fileContents}))
     .pipe(gulp.dest(paths.build.root))
 });
@@ -129,21 +133,18 @@ gulp.task("create:webp", function () {
 /*Создаем SVG-спрайт*/
 gulp.task("create:svg-sprite", function () {
   console.log("Создание SVG спрайта...");
-
   var svgs = gulp
     .src(paths.source.spritePattern)
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest(paths.source.imgFolder));
+    .pipe(gulp.dest(paths.build.img));
 
     return gulp
-      .src("build/*.html")
-      .pipe(inject(svgs, {
-        transform: fileContents
-      }))
-      .pipe(gulp.dest("build"));
+      .src(paths.build.html)
+      .pipe(inject(svgs, {transform: fileContents}))
+      .pipe(gulp.dest(paths.build.root));
 });
 
 /*Сборка и минификация стилей SASS*/

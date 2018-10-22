@@ -42,6 +42,10 @@
   background-position: center -17px;
   background-size: 575px auto;
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
+
   @include tablet {
     min-height: 558px;
     padding-top: 84px;
@@ -65,10 +69,6 @@
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
     }
-  }
-
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/hero-mobile@2x.jpg");
   }
 }
 
