@@ -10,6 +10,42 @@
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
   <script src="js/picturefill.min.js"></script>
+<!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /* По умолчанию мобильный макет */
+    background-image: url("img/pixel_glass/index-mobile.png");
+  }
+
+  /* Планшет */
+
+  @media (min-width: 768px) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url("img/pixel_glass/index-tablet.png");
+    }
+  }
+
+  /* Десктоп */
+
+  @media (min-width: 1150px) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url("img/pixel_glass/index-desktop.png");
+
+    }
+  }
+
+  BODY {
+    opacity: .5;
+  }
+</style>
+
+<link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 
 <body class="page">

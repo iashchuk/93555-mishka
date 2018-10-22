@@ -48,7 +48,7 @@
   position: relative;
   display: block;
   width: 100%;
-  padding: 31px 95px 30px 29px;
+  padding: 27px 95px 28px 29px;
   font-weight: 700;
   font-size: 19px;
   color: #ffffff;
@@ -100,6 +100,7 @@
   width: 120px;
   margin: 0;
   padding: 0;
+  line-height: 24px;
 
   @include tablet {
     width: 111px;
