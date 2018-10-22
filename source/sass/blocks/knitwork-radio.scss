@@ -1,4 +1,6 @@
 .knitwork-radio {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   padding-bottom: 17px;
@@ -10,6 +12,7 @@
 }
 
 .knitwork-radio__item {
+  width: 100%;
   margin-bottom: 15px;
 
   @include tablet {

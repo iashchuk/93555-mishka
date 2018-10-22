@@ -9,14 +9,14 @@
   }
 
   @include desktop {
-    margin-bottom: 49px;
+    margin-bottom: 29px;
   }
 }
 
 .product__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0;
   list-style: none;
 }
@@ -39,10 +39,10 @@
 
   @include desktop {
     margin-right: 52px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
     &:last-child {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
 
     &:nth-child(3n) {

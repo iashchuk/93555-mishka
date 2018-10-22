@@ -1,4 +1,7 @@
 .knitwork-entry {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   margin: 0;
   padding: 0;
   padding-bottom: 9px;
@@ -25,6 +28,7 @@
 }
 
 .knitwork-entry__item {
+  width: 100%;
   margin-bottom: 22px;
 
   @include tablet {

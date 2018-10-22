@@ -111,10 +111,11 @@
 }
 
 .knitwork__field {
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 30px;
 
   @include tablet {
-    display: flex;
     width: 768px;
     margin: 0 auto;
     padding: 0 50px;
@@ -159,6 +160,7 @@
 .knitwork__field--comment {
   @include tablet {
     padding-top: 49px;
+    padding-bottom: 16px;
   }
 }
 
@@ -199,7 +201,7 @@
 
 .knitwork__button {
   width: 100%;
-  margin-bottom: 57px;
+  margin-bottom: 26px;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;

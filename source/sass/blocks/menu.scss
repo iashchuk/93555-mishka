@@ -17,10 +17,12 @@
 .menu--site {
   @include tablet {
     width: 334px;
+    background-color: #f9f9f9;
   }
 
   @include desktop {
     width: 440px;
+    background-color: #ffffff;
   }
 }
 
