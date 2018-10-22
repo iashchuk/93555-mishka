@@ -39,6 +39,7 @@
 
   @include desktop {
     display: flex;
+    justify-content: flex-start;
     width: 700px;
     background-color: transparent;
   }

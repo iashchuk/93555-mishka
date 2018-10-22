@@ -5,6 +5,7 @@
   padding: 36px 30px 45px 30px;
 
   @include tablet {
+    justify-content: flex-start;
     padding: 0;
     padding-top: 79px;
     padding-bottom: 100px;
@@ -222,6 +223,7 @@
 
   @include tablet {
     width: 175px;
+    margin-left: auto;
   }
 
   @include desktop {

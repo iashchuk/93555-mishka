@@ -5,6 +5,7 @@
   justify-content: center;
 
   @include tablet {
+    justify-content: space-between;
     max-width: 800px;
     margin: 0 auto;
   }
@@ -102,7 +103,6 @@
     order: 2;
     width: 320px;
     margin: 0;
-    margin-left: auto;
     padding: 17px 0 27px;
     font-weight: 400;
     font-size: 15px;
