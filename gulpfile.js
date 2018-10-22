@@ -28,6 +28,7 @@ var paths = {
     js: "source/js/**/*.js",
     fonts: "source/fonts/**/*.{woff,woff2}",
     img: "source/img/**/*",
+    imgFolder: "source/img",
     imgWebp: "source/img/**/*.{png,jpg}",
     imgWebpFolder: "source/img/webp",
     spritePattern: "source/img/icon-*.svg",
@@ -53,7 +54,6 @@ gulp.task("clean:build", function () {
 gulp.task("copy:data", function () {
   console.log("Копирование данных в папку build...");
   return gulp.src([
-      paths.source.html,
       paths.source.fonts,
       paths.source.img
     ], {
@@ -71,7 +71,6 @@ gulp.task("copy:html", function () {
       include()
     ]))
     .pipe(gulp.dest(paths.build.root))
-    .pipe(server.stream());
 });
 
 /*Оптимизация изображений*/
@@ -134,7 +133,7 @@ gulp.task("create:svg-sprite", function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest(paths.build.img));
+    .pipe(gulp.dest(paths.source.imgFolder));
 });
 
 /*Сборка и минификация стилей SASS*/
@@ -163,11 +162,7 @@ gulp.task("script:js", function () {
   console.log("Сборка и минификация скриптов...");
 
   return gulp
-    .src([
-      paths.source.js,
-      paths.source.picturefill,
-      paths.source.svg4everybody
-    ])
+    .src(paths.source.js)
     .pipe(uglify())
     .pipe(rename({
       suffix: ".min"
@@ -175,6 +170,12 @@ gulp.task("script:js", function () {
     .pipe(gulp.dest(paths.build.js))
     .pipe(server.stream());
 });
+
+gulp.task("js", function () {
+  return gulp.src("source/**/*.js")
+    .pipe(gulp.dest("build"));
+});
+
 
 /*Сервер проекта*/
 gulp.task("serve", function () {
@@ -188,17 +189,18 @@ gulp.task("serve", function () {
 
   gulp.watch(paths.source.sassWatch, ["style:sass"]);
   gulp.watch(paths.source.js, ["script:js"]);
-  gulp.watch(paths.source.html, ["copy:html"]);
+  gulp.watch(paths.source.html, ["copy:html"]).on('change', server.reload);
 });
 
 /*Сборка проекта: dev*/
 gulp.task("dev", function (done) {
   run(
     "clean:build",
+    "create:svg-sprite",
     "copy:data",
+    "copy:html",
     "style:sass",
     "script:js",
-    "create:svg-sprite",
     done
   );
 });
@@ -208,11 +210,12 @@ gulp.task("build", function (done) {
   run(
     "clean:build",
     "optimization:images",
+    "create:svg-sprite",
     "create:webp",
     "copy:data",
+    "copy:html",
     "style:sass",
     "script:js",
-    "create:svg-sprite",
     done
   );
 });
