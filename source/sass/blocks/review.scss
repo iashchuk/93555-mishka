@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 36px 30px 45px 30px;
+  overflow: hidden;
 
   @include tablet {
     justify-content: flex-start;
@@ -17,7 +18,6 @@
     padding-top: 71px;
     padding-bottom: 154px;
     padding-left: 175px;
-    overflow: hidden;
   }
 
   &::after {
@@ -25,24 +25,27 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: -8px;
+    display: block;
+    width: 328px;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-size: auto 6px;
+    background-size: 320px 6px;
 
     @include tablet {
-      left: 0;
+      left: -19px;
       bottom: 0;
+      width: 787px;
       height: 17px;
-      background-size: auto 17px;
+      background-size: 768px 17px;
     }
 
     @include desktop {
-      left: -22px;
-      width: 1072px;
-      height: 21px;
+      left: -27px;
+      width: 1077px;
+      height: 23px;
+      background-size: 1050px 23px;
     }
   }
 

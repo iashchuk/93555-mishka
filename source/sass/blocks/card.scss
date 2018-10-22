@@ -87,7 +87,7 @@
     width: 334px;
     min-height: 333px;
     padding-top: 25px;
-    padding-bottom: 28px;
+    padding-bottom: 26px;
   }
 
   @include desktop {
@@ -132,7 +132,7 @@
   @include tablet {
     flex-direction: row;
     margin-top: auto;
-    padding: 25px 3px 0 5px;
+    padding: 22px 3px 0 5px;
   }
 
   @include desktop {

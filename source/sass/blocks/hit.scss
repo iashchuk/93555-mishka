@@ -5,33 +5,34 @@
   max-width: 320px;
   margin: 0 auto;
   padding: 28px 30px 36px 30px;
+  overflow: hidden;
 
   &::after {
     content: "";
     position: absolute;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: -8px;
     display: block;
-    width: 100%;
+    width: 328px;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-size: auto 6px;
+    background-size: 320px 6px;
   }
 
   @include tablet {
-    width: 668px;
     max-width: none;
     padding: 0;
     padding-top: 16px;
     padding-bottom: 62px;
 
     &::after {
-      left: 0;
-      bottom: 0;
+      left: -19px;
+      bottom: -2px;
+      width: 787px;
       height: 17px;
-      background-size: auto 17px;
+      background-size: 768px 17px;
     }
   }
 
@@ -40,12 +41,13 @@
     width: 1050px;
     padding-top: 18px;
     padding-bottom: 90px;
-    overflow: hidden;
 
     &::after {
-      left: -22px;
-      width: 1072px;
-      height: 21px;
+      left: -27px;
+      bottom: 0;
+      width: 1077px;
+      height: 23px;
+      background-size: 1050px 23px;
     }
   }
 }
