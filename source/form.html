@@ -10,12 +10,12 @@
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
   <script src="js/picturefill.min.js"></script>
-<style>
+<!-- <style>
   HTML {
     background-repeat: no-repeat;
     background-position: 50% 0;
     /* По умолчанию мобильный макет */
-    background-image: url("img/pixel_glass/index-mobile.png");
+    background-image: url("img/pixel_glass/mishka-form-mobile.jpg");
   }
 
   /* Планшет */
@@ -43,7 +43,7 @@ background-image: url("img/pixel_glass/mishka-form-desktop.jpg");
 </style>
 
 <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-<script src="../node_modules/pixel-glass/script.js"></script>
+<script src="../node_modules/pixel-glass/script.js"></script> -->
 </head>
 
 <body class="page">
@@ -184,7 +184,7 @@ background-image: url("img/pixel_glass/mishka-form-desktop.jpg");
         <div class="knitwork__field knitwork__field--phone">
           <h3 class="knitwork__legend knitwork__legend--phone">Тел</h3>
           <div class="knitwork__block knitwork-entry knitwork-entry--phone">
-            <label class="knitwork-entry__label visually-hidden" for="entry-number">Введите номер телефона</label>
+            <label class="knitwork-entry__label visually-hidden" for="entry-number"><span class="visually-hidden">Введите номер телефона</span></label>
             <input class="knitwork-entry__input knitwork-entry__input--phone" id="entry-number" name="phone-number"
               type="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
             <svg class="knitwork-entry__icon knitwork-entry__icon--phone" width="25" height="24">
@@ -196,7 +196,7 @@ background-image: url("img/pixel_glass/mishka-form-desktop.jpg");
         <div class="knitwork__field knitwork__field--mail">
           <h3 class="knitwork__legend knitwork__legend--mail">E-mail</h3>
           <div class="knitwork__block knitwork-entry knitwork-entry--mail">
-            <label class="knitwork-entry__label visually-hidden" for="entry-mail">Введите адрес электронной почты</label>
+            <label class="knitwork-entry__label visually-hidden" for="entry-mail"><span class="visually-hidden">Введите адрес электронной почты</span></label>
             <input class="knitwork-entry__input knitwork-entry__input--mail" id="entry-mail" name="mail" type="email"
               placeholder="Ваш Email*" required>
             <svg class="knitwork-entry__icon knitwork-entry__icon--mail" width="32" height="32">
@@ -209,7 +209,7 @@ background-image: url("img/pixel_glass/mishka-form-desktop.jpg");
       <div class="knitwork__field knitwork__field--comment">
         <h3 class="knitwork__legend knitwork__legend--comment">Доп</h3>
         <div class="knitwork__block knitwork-comment">
-          <label class="knitwork-comment__label visually-hidden" for="comment-text">Напишите дополнительные пожелания</label>
+          <label class="knitwork-comment__label visually-hidden" for="comment-text"><span class="visually-hidden">Напишите дополнительные пожелания</span></label>
           <textarea class="knitwork-comment__textarea" id="comment-text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
       </div>
