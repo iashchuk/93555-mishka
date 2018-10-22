@@ -61,6 +61,8 @@
   border: none;
 
   @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
     width: 355px;
   }
 }
@@ -78,6 +80,7 @@
 .order__wrapper {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .order__legend {

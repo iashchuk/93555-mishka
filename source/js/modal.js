@@ -7,7 +7,7 @@
   var page = document.querySelector(".page");
   var overlay = document.querySelector(".order__overlay");
 
-  var onEscPressButton = function(evt) {
+  var onEscPressButton = function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
       order.classList.remove("order--show");
@@ -34,9 +34,9 @@
 
   };
 
-  orderButtons.forEach(function (button) {
-    button.addEventListener('click', onOrderButtonClick);
-  });
+  for (var i = 0; i < orderButtons.length; i++) {
+    orderButtons[i].addEventListener('click', onOrderButtonClick);
+  };
 
 
 })();
