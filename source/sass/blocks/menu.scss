@@ -170,6 +170,16 @@
     padding: 30px 0 28px 10px;
     text-align: right;
   }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .menu__link--special {

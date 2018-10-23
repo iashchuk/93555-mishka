@@ -15,8 +15,19 @@
 }
 
 .copyright__link {
+  position: relative;
   margin-left: 30px;
   padding-top: 2px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 
   @include tablet {
     padding-top: 6px;
@@ -35,7 +46,7 @@
     }
   }
 
-  &:active + .copyright__text {
+  &:active+.copyright__text {
     color: rgba(0, 0, 0, 0.3);
   }
 }
